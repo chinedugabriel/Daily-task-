@@ -1,3 +1,9 @@
 //  name = "move" ;
 // let name;
-console.log(typeof "boy");
+let arr = [1,2,46,25,2];
+let syr = "Active";
+
+console.log(arr.lastIndexOf(2, 2));
+console.log(syr.indexOf("i"));
+
+
