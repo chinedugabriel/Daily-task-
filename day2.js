@@ -11,6 +11,11 @@ let name1 = "Freelance with the best of the best Silicon Valley companies in a n
 // the replace method is case sensitive to avoid this we use a regular expression /word/i to make it insensitive
 // let result = name1.replace(/Best/i, "new");
 
-let result = name1.replace(/best/g, "new");
+// let result = name1.replace(/best/g, "new");
+// console.log(result);
+
+// Converting string from Upper and  Lower Case
+// let result = name1.toUpperCase();
+let result = name1.toLowerCase();
 console.log(result);
  
