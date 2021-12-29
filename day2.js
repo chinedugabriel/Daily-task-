@@ -6,16 +6,8 @@ let fruits = ["Banana", "Orange", "Apple", "Mango", "Melon"];
 // 
 
 let name1 = "Freelance with the best of the best Silicon Valley companies in a number of software jobs";
-// let result = name1.replace("Best", "new");
-
-// the replace method is case sensitive to avoid this we use a regular expression /word/i to make it insensitive
-// let result = name1.replace(/Best/i, "new");
-
-// let result = name1.replace(/best/g, "new");
-// console.log(result);
-
-// Converting string from Upper and  Lower Case
-// let result = name1.toUpperCase();
-let result = name1.toLowerCase();
+// concat() method
+// it used to join two or more words together, its same as using +  operator 
+let result = name1.concat(". ", "\n", "javascript is the language");
 console.log(result);
  
