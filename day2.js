@@ -3,39 +3,38 @@ let fruits = ["Banana", "Orange", "Apple", "Mango", "Melon"];
 // console.log(fruits[2].split("", 3));
 
 
-
-
 let word1 = " Freelance with the best of the best Silicon Valley companies in a number of software jobs  ";
 let word2 = "i am more than able";
 
-// Extracting String Characters
-// There are 3 methods for extracting string characters:
+let Num = "12345678910";
+let Num2 = "1,2,3,4,5,6,7,8,9,10";
 
-// charAt(position)
-// charCodeAt(position)
-// Property access [ ]
+let letters = "abcdefghijklmnopqrstuvwxyz";
 
-// charAt()
-// The charAt() method returns the character at a specified index (position) in a string
+// Converting a string to an Array using split() method
 
-// let result = word2.charAt(10)
-// console.log(result);
+// let result = word2.split(); // [ 'i am more than able' ] //this result to a single word array
+// let result = word2.split("") //[
+//   'i', ' ', 'a', 'm', ' ',        
+//   'm', 'o', 'r', 'e', ' ',        
+//   't', 'h', 'a', 'n', ' ',        
+//   'a', 'b', 'l', 'e'
+//   ] //using split("") results to individual array of each letters
+
+// let result = word2.split(" ") // [ 'i', 'am', 'more', 'than', 'able' ] using split(" ") gives an individual word array
 
 
+// let result = word2.split(" ", 3);
+// split(separator, limit[the number of words you want tto extract] )
 
+let result = word2.split("");
 
-// charCodeAt()
-// The charCodeAt() method returns the unicode of the character at a specified index in a string:
-
-// The method returns a UTF-16 code (an integer between 0 and 65535).
-
-// let result = word2.charCodeAt(3)
-// console.log(result);
-
-// Property access []
-// in the process makes it easy to access character in a string like an array.
-
-let result = word2[3]
 console.log(result);
 
- 
+
+// let fruit = "Banana";
+// let result = fruit.match(/na/gi);
+
+// console.log(result.length);
+
+
