@@ -11,30 +11,17 @@ let Num2 = "1,2,3,4,5,6,7,8,9,10";
 
 let letters = "abcdefghijklmnopqrstuvwxyz";
 
-// Converting a string to an Array using split() method
+// Mactch() method
+//  it retrieves the result of matching a string against a regular expression and returns the matches, as an Array object.
 
-// let result = word2.split(); // [ 'i am more than able' ] //this result to a single word array
-// let result = word2.split("") //[
-//   'i', ' ', 'a', 'm', ' ',        
-//   'm', 'o', 'r', 'e', ' ',        
-//   't', 'h', 'a', 'n', ' ',        
-//   'a', 'b', 'l', 'e'
-//   ] //using split("") results to individual array of each letters
+// let result = word2.match(/a/gi);
+// console.log(result);
 
-// let result = word2.split(" ") // [ 'i', 'am', 'more', 'than', 'able' ] using split(" ") gives an individual word array
+//  Regular Expression 
+// A regular expression is a sequence of characters that forms a search pattern.
+// Eg:   var part = /wordMan/i;
 
-
-// let result = word2.split(" ", 3);
-// split(separator, limit[the number of words you want tto extract] )
-
-let result = word2.split("");
-
-console.log(result);
-
-
-// let fruit = "Banana";
-// let result = fruit.match(/na/gi);
-
-// console.log(result.length);
+// examples of methods that uses regular expression are:
+// search(), Replace(), match(), etc...
 
 
