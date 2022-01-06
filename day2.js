@@ -25,3 +25,7 @@ let letters = "abcdefghijklmnopqrstuvwxyz";
 // search(), Replace(), match(), etc...
 
 
+// using regular expression object 
+// let re = new RegExp('ab+c');
+
+
