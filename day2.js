@@ -28,4 +28,5 @@ let letters = "abcdefghijklmnopqrstuvwxyz";
 // using regular expression object 
 // let re = new RegExp('ab+c');
 
-
+let reg = new RegExp("n", "m");
+console.log(word1.match(reg));
