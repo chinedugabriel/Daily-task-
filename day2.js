@@ -6,7 +6,7 @@ let fruits = ["Banana", "Orange", "Apple", "Mango", "Melon"];
 let word1 = " Freelance with the best of the best Silicon Valley companies in a number of software jobs  ";
 let word2 = "i am more than able";
 
-// let Num = "12345678910";
+let Num = 12345678910;
 // let Num2 = "1,2,3,4,5,6,7,8,9,10";
 
 let letters = "abcdefghijklmnopqrstuvwxyz";
@@ -38,4 +38,18 @@ let cu = 19.4152;
 // toFixed() returns a string, with the number written with a specified number of decimals:
 // it's more like rounding up to the given nearest decimal
 
-console.log(cu.toFixed(2));
+// console.log(cu.toFixed(2)); 
+
+// toPrecision()
+// toPrecision() returns a string, with a number written with a specified length.
+
+
+console.log(Num.toPrecision(4)); 
+/*
+// toPrecision()
+Return value
+
+A string representing a Number object in fixed-point or exponential notation rounded to precision significant digits. See the discussion of rounding in the description of the Number.prototype.toFixed() method, which also applies to toPrecision().
+
+If the precision argument is omitted, behaves as Number.prototype.toString(). If the precision argument is a non-integer value, it is rounded to the nearest integer. 
+*/
