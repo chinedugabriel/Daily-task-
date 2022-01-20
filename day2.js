@@ -1,7 +1,4 @@
 let fruits = ["Banana", "Orange", "Apple", "Mango", "Melon"];
-// fruits.toString()
-// console.log(fruits[2].split("", 3));
-
 
 let word1 = " Freelance with the best of the best Silicon Valley companies in a number of software jobs  ";
 let word2 = "i am more than able";
@@ -11,45 +8,61 @@ let Num = 12345678910;
 
 let letters = "abcdefghijklmnopqrstuvwxyz";
 
+let newResult = 70;
 // Number
-// It can be writen with or with out decimal 
- 
-// // Exponential way of writing 
-// let numEx2 = 123e-5;
-// // its same as 
-// let numEx = 123 / 100000; 
-// // or 
-// let numEx2 = 123e5;
-// // it same as 
-// let numEx = 123 * 100000; 
+// converting a number to a string, we use toString() method
+// console.log(newResult.toString());
 
-// Number method 
-//toString() method returns a number as a string
- 
-let cu = 19.4152;
+// toExponential() returns a string, with a number rounded and written using exponential notation.
+// console.log(newResult.toExponential(2));
 
-// console.log(cu.toString());
-// console.log(cu.toExponential(2));
+// toFixed() 
+// it returns a string with the number written with a specified number of decimals. it has more to do with float numbers.
 
-// toExponential() 
-// It returns a string, with a number rounded and written using exponential notation.
+let ux = 97.4536;
+// let result = ux.toFixed(6);
+// console.log(result);
 
-// toFixed() Method 
-// toFixed() returns a string, with the number written with a specified number of decimals:
-// it's more like rounding up to the given nearest decimal
+// toPrecision() returns a string, with a number written with a specified length:
+// let result = ux.toPrecision(3);
+// console.log(result);
 
-// console.log(cu.toFixed(2)); 
-
-// toPrecision()
-// toPrecision() returns a string, with a number written with a specified length.
+// Note: toExponential(), toFixed(), toPrecision() methods returns a string
 
 
-console.log(Num.toPrecision(4)); 
-/*
-// toPrecision()
-Return value
 
-A string representing a Number object in fixed-point or exponential notation rounded to precision significant digits. See the discussion of rounding in the description of the Number.prototype.toFixed() method, which also applies to toPrecision().
+// valueOf() returns a number as a number.
+// this method is used internally in JavaScript to convert Number objects to primitive values.
 
-If the precision argument is omitted, behaves as Number.prototype.toString(). If the precision argument is a non-integer value, it is rounded to the nearest integer. 
-*/
+// let result = ux.valueOf();
+// console.log(result);
+
+// Converting Variables to Numbers:
+// Number()
+// paseInt()
+// paseFloat()
+
+// Method	        Description
+// Number()	        Returns a number, converted from its argument.
+// parseFloat()	    Parses its argument and returns a floating point number
+// parseInt()	    Parses its argument and returns an integer
+
+// result = Number("2.98");
+// console.log(result);
+
+// parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+
+// result = parseInt("3 9");  // 3
+// result = parseInt("3.9"); // 3
+// result = parseInt("39lkj"); // 39
+// result = parseInt("XC39"); // NaN
+// console.log(result);
+
+// parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+
+result = parseFloat("3.35");
+console.log(result);
+console.log(Number.parseInt());
+
+
+
