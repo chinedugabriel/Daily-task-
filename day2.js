@@ -1,5 +1,3 @@
-let fruits = ["Banana", "Orange", "Apple", "Mango", "Melon"];
-
 let word1 = " Freelance with the best of the best Silicon Valley companies in a number of software jobs  ";
 let word2 = "i am more than able";
 
@@ -9,60 +7,130 @@ let Num = 12345678910;
 let letters = "abcdefghijklmnopqrstuvwxyz";
 
 let newResult = 70;
-// Number
-// converting a number to a string, we use toString() method
-// console.log(newResult.toString());
-
-// toExponential() returns a string, with a number rounded and written using exponential notation.
-// console.log(newResult.toExponential(2));
-
-// toFixed() 
-// it returns a string with the number written with a specified number of decimals. it has more to do with float numbers.
 
 let ux = 97.4536;
-// let result = ux.toFixed(6);
-// console.log(result);
 
-// toPrecision() returns a string, with a number written with a specified length:
-// let result = ux.toPrecision(3);
-// console.log(result);
+//      Arrays
 
-// Note: toExponential(), toFixed(), toPrecision() methods returns a string
+// How to create an array
+
+let fruits = ["Banana", "Orange", "Apple", "Mango", "Melon"];
+// OR you create an array like this :
+
+// let fruits = [];
+// fruits[0] = "Cross ";
+// fruits[1] = "Muse ";
+// fruits[2] = "Bird ";
+// fruits[3] = "Man ";
+// fruits[4] = "Good ";
+// fruits[5] = "Girl ";
+// fruits[6] = "Fish ";
+// fruits[7] = "Brain ";
+// fruits[8] = "Wake ";
+// fruits[9] = "Moon ";
+// fruits[10] = "Work ";
+// fruits[11] = "Play ";
+// fruits[12] = "Play_list";
+
+// asses an array by calling the index
+// let result = fruits[1];
+
+// result = fruits.length;
+
+//  console.log(result.length );
+
+//  Looping through an Array;
+//  let op = [];
+//  for (i=0; i< fruits.length; i++){
+//      op .push(fruits[i]);
+//     }
+//     console.log(op);
+//  for (i=0; i< fruits.length; i++){
+//     //  op .push(fruits[i]);
+//      op += fruits[i];
+//     }
+//     console.log(op.split(" "));
+
+// Array Method
+//Push()
+// its used for adding more content into an array...
+// let food = ["jollof_rice", "cake", "white_soup", "fish_stew"];
+// food.push("Oha_soup")
+// let dish = food;
+// console.log(dish);
 
 
+// We use Array.isArray() to find or to check if an array is actually an array.....
 
-// valueOf() returns a number as a number.
-// this method is used internally in JavaScript to convert Number objects to primitive values.
+// Array.isArray(name of the array here);
 
-// let result = ux.valueOf();
-// console.log(result);
+// or   fruits instanceof Array;
 
-// Converting Variables to Numbers:
-// Number()
-// paseInt()
-// paseFloat()
+// To string to convert an array to a string 
+// let dish = food.toString();
+// console.log(dish);
 
-// Method	        Description
-// Number()	        Returns a number, converted from its argument.
-// parseFloat()	    Parses its argument and returns a floating point number
-// parseInt()	    Parses its argument and returns an integer
+// join() method behaves as the toString method the only deference is that it specifies the separator
 
-// result = Number("2.98");
-// console.log(result);
+// dish = food.join("*");
+// console.log(dish);
 
-// parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+// Popping and Pushing 
+// Popping items out of an array, or pushing items into an array.
 
-// result = parseInt("3 9");  // 3
-// result = parseInt("3.9"); // 3
-// result = parseInt("39lkj"); // 39
-// result = parseInt("XC39"); // NaN
-// console.log(result);
+// Popping 
+// The pop() method removes the last item from an array 
+// dish = food.pop();
+// console.log(food);
 
-// parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+// food.push("Oha_soup")
 
-result = parseFloat("3.35");
-console.log(result);
-console.log(Number.parseInt());
+// Shifting Elements
+// Shifting is equivalent to popping, working on the first element instead of the last.
+// dish = food.shift();
+// console.log(food);
 
+// The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
 
+// dish = food.unshift("Amala_Eforirow");
+// console.log(food);
+
+// you can also asses an array by its index value
+// console.log(food[2]); 
+
+// Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+// delete food[2];
+// console.log(food);
+
+// Using splice in a array 
+// splice() method can be used to add new items to an array:
+
+let food = ["jollof_rice", "cake", "white_soup", "fish_stew","Egusi_soup"];
+
+// dish = food.splice(1,0,"melon","orang"); 
+/* 
+The first parameter (0) defines the position where new elements should be added (spliced in).
+
+The second parameter (1) defines how many elements should be removed.
+
+The rest of the parameters are omitted. No new elements will be added. 
+*/
+
+// dish = food.splice(1,2);
+
+// console.log(food);
+/*
+Merging (Concatenating) Arrays
+The concat() method creates a new array by merging (concatenating) existing arrays:
+acts the same way when using a string method
+*/
+// dish = food.concat(fruits);
+// console.log(dish);
+/*
+Slicing an Array
+The slice() method slices out a piece of an array into a new array.
+slice(show the value at this given index, before this given index)
+*/
+dish = food.slice(1,3);
+console.log(dish);
 
