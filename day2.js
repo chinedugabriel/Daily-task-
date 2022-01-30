@@ -1,7 +1,6 @@
 let word1 = " Freelance with the best of the best Silicon Valley companies in a number of software jobs  ";
 let word2 = "i am more than able";
 
-let Num = 12345678910;
 // let Num2 = "1,2,3,4,5,6,7,8,9,10";
 
 let letters = "abcdefghijklmnopqrstuvwxyz";
@@ -14,123 +13,97 @@ let ux = 97.4536;
 
 // How to create an array
 
+
+// sort() Method
+// The sort() method sorts or arrange an array alphabetically:
+// dish = food.sort();
+
+// reverse();
+// reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first. 
+// but for this to work for array that have words in them, and not just plain alphabet or numbers, you have to sort() first;
+
+// dish = food.sort();
+// dish = food.reverse();
+// console.log(dish);
+
+// let arrletters = letters.split("");
+
+// arrletters.reverse();
+// console.log(arrletters);
+
+
+// Num.reverse();
+// console.log(Num);
+
+
+
+// Numeric Sort
+// Earlier we did simple sorting with strings and single number values but sorting number with dobble values with just simple sort() will not be accurate thats when we need to pass in a function to clearly state or correct this glitch (function(a,b){ return a - b};) using a compare function
+
+/*
 let fruits = ["Banana", "Orange", "Apple", "Mango", "Melon"];
-// OR you create an array like this :
 
-// let fruits = [];
-// fruits[0] = "Cross ";
-// fruits[1] = "Muse ";
-// fruits[2] = "Bird ";
-// fruits[3] = "Man ";
-// fruits[4] = "Good ";
-// fruits[5] = "Girl ";
-// fruits[6] = "Fish ";
-// fruits[7] = "Brain ";
-// fruits[8] = "Wake ";
-// fruits[9] = "Moon ";
-// fruits[10] = "Work ";
-// fruits[11] = "Play ";
-// fruits[12] = "Play_list";
+let food = ["jollof_rice", "cake", "white_soup", "fish_stew","Egusi_soup"]
 
-// asses an array by calling the index
-// let result = fruits[1];
-
-// result = fruits.length;
-
-//  console.log(result.length );
-
-//  Looping through an Array;
-//  let op = [];
-//  for (i=0; i< fruits.length; i++){
-//      op .push(fruits[i]);
-//     }
-//     console.log(op);
-//  for (i=0; i< fruits.length; i++){
-//     //  op .push(fruits[i]);
-//      op += fruits[i];
-//     }
-//     console.log(op.split(" "));
-
-// Array Method
-//Push()
-// its used for adding more content into an array...
-// let food = ["jollof_rice", "cake", "white_soup", "fish_stew"];
-// food.push("Oha_soup")
-// let dish = food;
-// console.log(dish);
+let Num = [1,2,3,4,5,6,7,8,9,10];
 
 
-// We use Array.isArray() to find or to check if an array is actually an array.....
+let letter = ["a","B","C","d","e","F"];
 
-// Array.isArray(name of the array here);
+let result = cNum.sort(function(a,b){ return a - b});
+// let result = cNum.sort((a,b)=> a - b);
+result= letter.sort(function(a,b){ return a - b});
+console.log(result);
 
-// or   fruits instanceof Array;
-
-// To string to convert an array to a string 
-// let dish = food.toString();
-// console.log(dish);
-
-// join() method behaves as the toString method the only deference is that it specifies the separator
-
-// dish = food.join("*");
-// console.log(dish);
-
-// Popping and Pushing 
-// Popping items out of an array, or pushing items into an array.
-
-// Popping 
-// The pop() method removes the last item from an array 
-// dish = food.pop();
-// console.log(food);
-
-// food.push("Oha_soup")
-
-// Shifting Elements
-// Shifting is equivalent to popping, working on the first element instead of the last.
-// dish = food.shift();
-// console.log(food);
-
-// The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
-
-// dish = food.unshift("Amala_Eforirow");
-// console.log(food);
-
-// you can also asses an array by its index value
-// console.log(food[2]); 
-
-// Using delete may leave undefined holes in the array. Use pop() or shift() instead.
-// delete food[2];
-// console.log(food);
-
-// Using splice in a array 
-// splice() method can be used to add new items to an array:
-
-let food = ["jollof_rice", "cake", "white_soup", "fish_stew","Egusi_soup"];
-
-// dish = food.splice(1,0,"melon","orang"); 
-/* 
-The first parameter (0) defines the position where new elements should be added (spliced in).
-
-The second parameter (1) defines how many elements should be removed.
-
-The rest of the parameters are omitted. No new elements will be added. 
 */
 
-// dish = food.splice(1,2);
+let fun = ["rice", "beans", "Egg", "Shawama", 21,1, 45,132];
 
-// console.log(food);
+let work = ["morning", "afternoon", "evening"];
+
+// let result = fun.sort(function(a,b){return a - b});
+
+// let result = fun.sort(function(a,b){return 0.5 - Math.random()}); // to generate random NUmbers...
+
+// console.log(result);
+
 /*
-Merging (Concatenating) Arrays
-The concat() method creates a new array by merging (concatenating) existing arrays:
-acts the same way when using a string method
-*/
-// dish = food.concat(fruits);
-// console.log(dish);
-/*
-Slicing an Array
-The slice() method slices out a piece of an array into a new array.
-slice(show the value at this given index, before this given index)
-*/
-dish = food.slice(1,3);
-console.log(dish);
+So, the compare function has the following form:
 
+function compare(a, b) {
+  if (a is less than b by some ordering criterion) {
+    return -1;
+  }
+  if (a is greater than b by the ordering criterion) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
+*/
+
+// console.log(0.5 - Math.random());
+
+let cNum = [1,2,8,9,17,18,19,20,21,22,23,24,44,50,34,66,];
+
+// let result = cNum.sort((a, b)=> a-b);
+
+// console.log(result[0], result[result.length -1]);
+
+// we use result[0] to get the lowest number or value and result[result.length -1] to find the highest value in the array;
+
+let boy =[ {
+    sex : "boy",
+    age : 46,
+    cloths : 30,
+    devices : 10
+},{
+    Sex : "girl",
+    age : 30,
+    cloths : 150,
+    devices : 6
+}];
+
+// let result = boy.sort((a,b)=> a.age - b.age);
+
+console.log(result);
