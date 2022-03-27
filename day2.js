@@ -73,3 +73,5 @@ console.log(sum);
 let evenAndOddFinder = item =>{ item % 2 == 1 ? console.log(item, "Is odd"):(item % 2 == 0) ? console.log(item, "Is even"): 0 };
 
 let vul = Num.forEach(evenAndOddFinder);
+
+let colors = [ red, cherry, rose, jam, merlot, garnet, crimson];
