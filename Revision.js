@@ -1,9 +1,398 @@
-//  name = "move" ;
-// let name;
-let arr = [1,2,46,25,2];
-let syr = "Active";
 
-console.log(arr.lastIndexOf(2, 2));
-console.log(syr.indexOf("i"));
+// Udemy EX
+
+// test();
+
+// function charCounterLengthSpecifier(n, num){
+//     let result = "";
+//     let fR = "";
+//     for (let i = 0; i < n.length; i++){
+//         result += n[i];
+//     }
+//    fR = result.length;
+//     nFR = result.length - num;
+//    console.log("You have written " + fR + " characters, " + "you have"+ " " + nFR + " " +"characters left");
+// }
+// ******************OR***************
+
+// function charCounterLengthSpecifier(n, num){
+//     let fR = n.length;
+//     nFR = n.length - num;
+//     console.log("You have written " + fR + " characters, " + "you have"+ " " + nFR + " " +"characters left");
+// }
+
+// charCounterLengthSpecifier("jofoubo9bwsqxcd2cfo9bv", 30);
 
 
+let page = "Home";
+// let num = "0123456789";
+// let letters = [ 'h', 'i', 'j', 'k', "be", "jay", 42 , 12, 22, 6, 10];
+
+let arr =[ "Nmadu", "Success", "Chris", "Debby"];
+
+// console.log(letters.sort((a,b)=> a -b));
+//  OR //
+// let result = letters.sort(function compareFun(a,b){ return a - b;});
+// let result = arr[arr.length -1];
+
+// looping through an array
+
+// for(let i = 0; i < arr.length; i++ ){
+//     result.push(arr[i]);
+// };
+
+// arr.forEach(outP);
+// function outP(v){
+//     return result.push(v);
+// };
+
+// let result = arr.join("pp");
+
+// let result = arr.pop();
+// arr[arr.length] = "chima";
+// arr[arr.length] = "Adaugo";
+
+// let result = arr.slice(3);
+    
+// console.log(result.toString());
+
+//=========================================
+// how find the maximum value in an array of number
+// let Narr = [23,3,5,6,2,79,2];
+// function minAndMaxFinder(array){
+//     let preArrange = array.sort((a,b) => a - b);
+//     if (preArrange[preArrange.length - 1] > preArrange[0]){
+//        return "Your Maximum value is " + preArrange[preArrange.length - 1] + " and your minimum value is " +  preArrange[0]; 
+//     }else {
+//         console.log(" check your code ");
+//     }
+    
+    
+// }
+
+//  console.log(minAndMaxFinder(Narr));
+//  console.log(Narr.sort());
+//  console.log(letters.sort());
+//==================================================
+
+// How to revers a string in an array
+// function wordMeaning(){
+//     let result ="This ";
+//     let p = "welcome back";
+
+    
+//    result = p.split("").reverse().join("");
+
+// console.log(result);
+
+// }
+// wordMeaning();
+
+// let p = ["wale", "Emmely", "mathew", "kemi", "Rockky"];
+// let result = p.splice(1,2,"justTry");
+// let result = p.slice(2,4);
+
+// sort()  
+let v = ["a", "c", "B", "E", "f"];
+
+// let result = v.sort((a, b)=> a - b);
+// let result = v.sort((a, b)=> 0.5 - Math.random());
+
+// let person =[ 
+//     {
+//     name : "ije",
+//     movie : "africa",
+//     location : "Oka "
+//     }, 
+//     {
+//     name : "faith",
+//     movie : "south africa",
+//     location : "Oka "
+//     },
+//     {
+//     name : "jane",
+//     movie : "ghana",
+//     location : "Oka "
+//     }
+// ];
+
+// let result = person.sort((a, b) => a.name - b.name);
+
+// forEach(callback_function,thisArg) 
+
+// let nv = "";
+// let result = p.forEach(myFunction);
+// function myFunction(value, index, array){
+//   nv += value;
+// }
+
+// console.log(nv);
+// console.log(arguments);
+// :::::::::::::::::::::::::::::::::
+// function wordCounter(str,wrd){
+//   word = new RegExp(wrd,"gi")
+//    let result = str.match(word);
+//    return result.length;
+//   }
+// console.log(wordCounter("bananana","na"));
+
+
+// Start Here
+/*
+Var +
+
+let +
+
+Const  +
+
+function +
+
+hoisting +
+
+Scope +
+
+data Types: string, number, boolean, null, undefine, Array, object; +
+
+
+Primitive data type & complex data type +
+string, number, boolean, undefine +
+
+complex data types :   +
+Null
+Array,
+Object
+***************************************************
+function(); +
+Object
+
+***string method***
+length +
+
+indexOf() +
+lastIndexOf() +
+search() +
+
+//Array {
+  find() +
+findIndex() +
+} 
+
+slice() +
+substring()+
+substr() +
+replace() +
+
+toUpperCase() +
+toLowerCase() +
+
+trim() +
+charAt() +
+charCodeAt() +
+
+padding
+padStart() +
+padEnd() +
+
+split("") +
+join("")
+
+Number method
+writing numbers in an exponential format (e)+
+toString()+
+toExponential()+
+toFixed()+
+toPrecision()+
+valueOf()+
+Number.MAX_VALUE+
+Number_MIN_VALUE+
+Number_POSITIVE_INFINITY+
+NumbEr_NEGATIVE_INFINITY+
+=============================
+ARRAYS AND ARRAY METHODS
+Creating an Array+
+Accessing an Array +
+checking If an Array.IsArray() using the following:
+  1) creating your own isArray() function +
+  2) Using Array.isArray() method +
+  3) Using ..... intstanceof Array; +
+
+Adding values into an array (pop(), shift()); +
+Removing values from an array (push(), unshift()); +
+Extracting values from an array (slice(), splice());+
+
+ForEach(); +
+map();+
+filter();+
+reduce();+
+reduceRight();
+every();
+some();
+indexOf();
+lastIndexOf();
+find();
+findIndex();
+
+
+
+*/
+let person =[ 
+    {
+    name : "ije",
+    movie : "Nije",
+    location : "Oka "
+    }, 
+    {
+    name : "faith",
+    movie : "south africa",
+    location : "Oka "
+    },
+    {
+    name : "jane",
+    movie : "ghana",
+    location : "Oka "
+    }
+];
+
+let text = "Gabriel is coming form church and you";
+let letters = [ 'h', 'i', 'j', 'k', "b", "j", 42 , 12, 22, 6, 10];
+let arrNum = [2, 3, 4, 10, 12];
+let r = ['n', 'r', 'd', 'c', 'u', 'b', 'a'];
+let num = 6.1355;
+
+let ayr = [22, 254];
+let nw =[];
+let evenNumbers =[];
+let oddNumbers =[];
+
+// arrNum.forEach(showArr);
+// function showArr(value){
+  //   if(value % 2 == 0){
+    //     return evenNumbers.push(++value);
+//   }else{
+//     return oddNumbers.push(--value);
+//   }
+// }
+const showArr = value => value % 2 == 0 ? evenNumbers.push(value) : oddNumbers.push(value) ;
+
+arrNum.forEach(showArr);
+
+// let result = arrNum.map(addFn);
+// function addFn(value,index,array){
+//   return sum = value * 2;
+// }
+
+// let result = arrNum.filter(Fn);
+// function Fn(value,index,array){
+//   return sum = value > 22;
+// }
+
+// let rv = [];
+// function test( value, index, array){
+//   return rv.push(value % 2 == 1 ? value:"");
+// }
+// arrNum.forEach(test);
+
+// let result = evenNumbers;
+// const mlt = (value,index,array)=>value % 2 ==1?value:"";
+
+// const mlt = (value,index,array)=>value % 2 ==1?value:"";
+
+// let go = arrNum.map(mlt);
+
+// const mlt = (value,index,array)=>value % 2 == 1;
+
+// let gee = arrNum.filter(mlt);
+
+//how to sum up the values in an array
+// let newArrNum = [2, 4, 6, 3, 5];
+// const sum = (previousValue, currentValue, currentIndex, array)=> previousValue + currentValue ;
+// let result = newArrNum.reduce(sum,0);
+
+// console.log(result);
+
+// how to find the highest value in an array
+// let newArrNum = [2, 4, 6, 3, 25];
+// const sum = (previousValue, currentValue, currentIndex, array)=> previousValue > currentValue ? previousValue : currentValue;
+// let result = newArrNum.reduce(sum,0);
+
+// console.log(result);
+
+// How to find the highest value in an object
+// let persons =[ 
+//     {
+//     name : "ije",
+//     movie : "africa",
+//     location : "Oka ",
+//     time : 10
+//     }, 
+//     {
+//     name : "faith",
+//     movie : "south africa",
+//     location : "Oka ",
+//     time : 2
+//     },
+//     {
+//     name : "jane",
+//     movie : "ghana",
+//     location : "Oka ",
+//     time : 4
+//     }, 
+//     {
+//     name : "faith",
+//     movie : "south africa",
+//     location : "Oka ",
+//     time : 2
+//     },
+//     {
+//       name : "ije",
+//       movie : "africa",
+//       location : "Oka ",
+//       time : 10
+//     }
+// ];
+// const sum = (previousValue, currentValue, currentIndex, array)=> previousValue > currentValue.time ? previousValue: currentValue.time ;
+// let result = persons.reduce(sum,0);
+
+let p = ["wale", "Emmely", "mathew", "Emmely", "kemi", "Rockky", "mathew", "Emmely"];
+
+let newArrNum = [2, 4, 6, 3, 2, 5];
+const evenNum = (previousValue, currentValue)=>
+(previousValue + currentValue)  % 2 !== 0 ? previousValue : currentValue;
+let result = newArrNum.reduce(evenNum,0);
+
+// console.log(result);
+
+let newAns = p.filter((value, index)=>p.indexOf(value)=== index);
+
+// console.log(newAns);
+// End Here
+
+const names = [
+	'shibu',
+	'neymar',
+	'vinicius',
+	'pattinson',
+	'ronaldo',
+	'shibu',
+	'neymar',
+	'pattinson',
+	'diCaprio'
+];
+
+let onlyName = names.reduce((accumulator, currentValue) => {
+	if (accumulator.indexOf(currentValue) ===  -1) {
+		accumulator.push(currentValue);
+	}
+	return accumulator;
+}, []);
+
+// console.log(onlyName);
+
+let wuv = p.reduce((previousValue,currentValue)=>{
+  if(previousValue.indexOf(currentValue) === -1){
+    previousValue.push(currentValue);
+  }
+  return previousValue;
+},[]);
+
+console.log(wuv);

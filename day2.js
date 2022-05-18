@@ -1,77 +1,88 @@
-let word1 = " Freelance with the best of the best Silicon Valley companies in a number of software jobs  ";
-let word2 = "i am more than able";
+let page = "Home";
+let num = "0123456789";
+let letters ="abcdefghijklmnopqrstuvwxyz";
+let arr =[ "Nmadu", "Success", "Chris", "Debby"];
+let arr2 = new Array( "Winner", "Faith", "Emmy");// Never create your using the new Keyword
+// let names;
+// names[0] = "Ebony";
+// names[1] = "charls";
+// names[2] ="Kally";
 
-// let Num2 = "1,2,3,4,5,6,7,8,9,10";
+/*
 
-let letters = "abcdefghijklmnopqrstuvwxyz";
+ How To check if an array is an array 
+  1)  Array.isArray(_____);
 
-let newResult = 70;
+  2)  create your own isArray() function;
 
-let ux = 97.4536;
+  3)  ______ instance of Array;
 
-//     Arrays
+*/
+// Array methods ".length", ".toString()" ".sort()", ".map()", ".filter()", ".reduce()" and more
 
-let fruits = ["Banana", "Orange", "Apple", "Mango", "Melon"];
+// console.log( Array.isArray( arr ));
 
-let food = ["jollof_rice", "cake", "white_soup", "fish_stew","Egusi_soup"]
+// console.log(arr[3]);
 
-let Num = [1,2,3,4,5,6,7,8,9,10];
-
-
-let letter = ["a","B","C","d","e","F"];
-
-
-let fun = ["rice", "beans", "Egg", "Shawama", 21,1, 45,132];
-
-let work = ["morning", "afternoon", "evening"];
-
-let cNum = [1,2,8,9,17,18,19,20,21,22,23,24,44,50,34,66,];
-
-
-// forEach() method
-// The forEach() method executes a provided function(a callBackFunction) once for each array element. the callbackFn is invoked with three arguments:
-
-// the value of the element
-// the index of the element
-// the Array object being traversed
-
-let sum = 0;
-
-// Here we sum the array to get the total value of the array 
-
-// let vul = Num.forEach((item, index )=> console.log("index & value ", index, "[",sum += item,"]"));
-
-// Here we multiplied each array by 2 :
-function addUpArr(item, index){
-    sum = item * 2;
- console.log(sum)
-}
-
-// A for loop example on how a foreach method works 
-
-// let Dy = 0;
-// for(let i = 0; i < Num.length; i++){
-//     console.log(Dy += Num[i])
+// for loop
+// Examples 
+// loop & print in ascending order
+// for(let i = 1; i <= 10; i++){
+//   console.log(i);
+// }
+// loop & print in descending order
+// for(let i = 10; i >= 1; i--){
+//   console.log(i);
 // }
 
-// let vul = Num.forEach(addUpArr);
+// looping through an array
+// let t = "";
+//  for(let i = 0; i < arr.length; i++){
+//   t+=arr[i];
+// }
+// console.log(t.split(""));
+ 
+//  let t = [];
+//  for(let i = 0; i < arr.length; i++){
+//   t.push(arr[i]);
+// }
+// console.log(t);
 
-// console.log(vul);
-console.log(sum);
+// Foreach() Loop 
 
-//Here is an example on how to find the even and odd numbers in a number Array.
+// foreach(callback, thisArg); //the callback represent the function which would be passed in and the function or callback in Question takes in 3 parameter ( element, index, array)
+//  let f2 = arr.forEach(
+//    function show(element){
+//     console.log(element+"2");
+//    }
+//    );
 
-// function evenAndOddFinder(arr){
-//     if (arr % 2 == 1 ){
-//         console.log(arr, "Is odd");
-//     }else if(arr % 2 == 0){
-//         console.log(arr, "Is even");
-//     }
+// let nums = [1,4,21,33,41,4,21];
+
+// function show(element){
+//   console.log(element * 2);
+//  }
+// nums.forEach(show);
+ 
+//    let f2 = arr.forEach(element => console.log(element.split(" ")));
+
+// console.log(f2);
+
+// let count = {};
+
+
+
+// nums.forEach(item => {
+//   if(count[item]){
+//     count[item]++;
+//   }else{
+//     count[item] = 1;
     
-// }
-// refactoring the function
-let evenAndOddFinder = item =>{ item % 2 == 1 ? console.log(item, "Is odd"):(item % 2 == 0) ? console.log(item, "Is even"): 0 };
+//   }
 
-let vul = Num.forEach(evenAndOddFinder);
+// });
 
-let colors = [ red, cherry, rose, jam, merlot, garnet, crimson];
+// console.log(count);
+
+
+
