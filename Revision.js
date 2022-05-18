@@ -355,18 +355,25 @@ arrNum.forEach(showArr);
 
 let p = ["wale", "Emmely", "mathew", "Emmely", "kemi", "Rockky", "mathew", "Emmely"];
 
-let newArrNum = [2, 4, 6, 3, 2, 5];
+// let newArrNum = [2, 4, 6, 3, 2, 5];
 const evenNum = (previousValue, currentValue)=>
 (previousValue + currentValue)  % 2 !== 0 ? previousValue : currentValue;
-let result = newArrNum.reduce(evenNum,0);
+// let result = newArrNum.reduce(evenNum,0);
 
 // console.log(result);
 
-let newAns = p.filter((value, index)=>p.indexOf(value)=== index);
+// How to remove duplicate value in an array using filter and indexOf
+// let newAns = p.filter((value, index)=>p.indexOf(value)=== index);
 
 // console.log(newAns);
+
+// in details explain what this code is doing...
+
+
 // End Here
 
+
+// How to remove duplicate value in an array using reduce and indexOf
 const names = [
 	'shibu',
 	'neymar',
@@ -379,20 +386,95 @@ const names = [
 	'diCaprio'
 ];
 
-let onlyName = names.reduce((accumulator, currentValue) => {
-	if (accumulator.indexOf(currentValue) ===  -1) {
-		accumulator.push(currentValue);
-	}
-	return accumulator;
-}, []);
+// let onlyName = names.reduce((accumulator, currentValue) => {
+// 	if (accumulator.indexOf(currentValue) ===  -1) {
+// 		accumulator.push(currentValue);
+// 	}
+// 	return accumulator;
+// }, []);
 
 // console.log(onlyName);
 
-let wuv = p.reduce((previousValue,currentValue)=>{
-  if(previousValue.indexOf(currentValue) === -1){
-    previousValue.push(currentValue);
-  }
-  return previousValue;
-},[]);
+// How to remove duplicate value in an array using reduce and indexOf
+// let wuv = p.reduce((previousValue,currentValue)=>{
+//   if(previousValue.indexOf(currentValue) === -1){
+//     previousValue.push(currentValue);
+//   }
+//   return previousValue;
+// },[]);
 
-console.log(wuv);
+// console.log(wuv);
+
+// in details explain what this code is doing...
+
+// class work before next class today..
+
+
+// *****************************************************
+
+// The reduceRight() works from right-to-left in the array as it  runs a function on each array element to produce (reduce it to) a single value.
+
+// let Arm = [[2, 4], [6, 3], [2, 5]];
+
+let fun = (accumulator,currentValue) => accumulator + currentValue;
+// let ans = Arm.reduceRight(fun);
+
+// console.log(ans);
+
+// every() the every method checks if all array values pass a test (from callback) and returns a boolean..
+
+let arm = [2, 4, 6, 3, 2, 5];
+
+let greaterValue = (value, index, array)=> value > 3;
+// let ams = arm.every(greaterValue);
+
+// console.log(ams);
+// **note for every all the values most pass the test for it out put to be true..
+
+
+// some() the every method checks if all array values pass a test (from callback) and returns a boolean..
+
+let arN = [2, 4, 6, 3, 2, 5];
+
+let greaterVal = (value, index, array)=> value > 3;
+// let amZ = arN.some(greaterValue);
+
+// console.log(amZ);
+
+// **note for some() it returns true even when some of the values in the array doesn't pass the test onlike every that requires all of it values to pass it test...
+
+
+// indexOf() give the index position of a value in the given array and doen't take a callback function to do so...
+
+// var fruits = ["Apple", "Orange", "Apple", "Mango"];
+// var a = fruits.indexOf("Orange");
+
+// console.log(a);
+// End
+
+// lastIndexOf() give the index position of a value in the given array, just indexOf but it performs its operation opposite by starting its process from right to left onlike indexOf() that does its own from left to right and doen't take a callback function to do so...
+
+var fruits = ["Apple", "Orange", "Apple", "Mango"];
+// var a = fruits.lastIndexOf("Orange");
+
+// console.log(a);
+// End
+
+// The find() method returns the value of the first array element that passes a test function.
+
+var numbers = [4, 9, 16, 25, 29];
+var firstY = numbers.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 8;
+} 
+
+console.log(firstY);
+
+// findIndex() method returns the index of the first array element that passes a test function.
+
+var firstO = numbers.findIndex(myWFunction);
+
+function myWFunction(value, index, array) {
+  return value > 18;
+} 
