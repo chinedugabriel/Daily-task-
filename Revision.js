@@ -1,133 +1,3 @@
-
-// Udemy EX
-
-// test();
-
-// function charCounterLengthSpecifier(n, num){
-//     let result = "";
-//     let fR = "";
-//     for (let i = 0; i < n.length; i++){
-//         result += n[i];
-//     }
-//    fR = result.length;
-//     nFR = result.length - num;
-//    console.log("You have written " + fR + " characters, " + "you have"+ " " + nFR + " " +"characters left");
-// }
-// ******************OR***************
-
-// function charCounterLengthSpecifier(n, num){
-//     let fR = n.length;
-//     nFR = n.length - num;
-//     console.log("You have written " + fR + " characters, " + "you have"+ " " + nFR + " " +"characters left");
-// }
-
-// charCounterLengthSpecifier("jofoubo9bwsqxcd2cfo9bv", 30);
-
-
-let page = "Home";
-// let num = "0123456789";
-// let letters = [ 'h', 'i', 'j', 'k', "be", "jay", 42 , 12, 22, 6, 10];
-
-let arr =[ "Nmadu", "Success", "Chris", "Debby"];
-
-// console.log(letters.sort((a,b)=> a -b));
-//  OR //
-// let result = letters.sort(function compareFun(a,b){ return a - b;});
-// let result = arr[arr.length -1];
-
-// looping through an array
-
-// for(let i = 0; i < arr.length; i++ ){
-//     result.push(arr[i]);
-// };
-
-// arr.forEach(outP);
-// function outP(v){
-//     return result.push(v);
-// };
-
-// let result = arr.join("pp");
-
-// let result = arr.pop();
-// arr[arr.length] = "chima";
-// arr[arr.length] = "Adaugo";
-
-// let result = arr.slice(3);
-    
-// console.log(result.toString());
-
-//=========================================
-// how find the maximum value in an array of number
-// let Narr = [23,3,5,6,2,79,2];
-// function minAndMaxFinder(array){
-//     let preArrange = array.sort((a,b) => a - b);
-//     if (preArrange[preArrange.length - 1] > preArrange[0]){
-//        return "Your Maximum value is " + preArrange[preArrange.length - 1] + " and your minimum value is " +  preArrange[0]; 
-//     }else {
-//         console.log(" check your code ");
-//     }
-    
-    
-// }
-
-//  console.log(minAndMaxFinder(Narr));
-//  console.log(Narr.sort());
-//  console.log(letters.sort());
-//==================================================
-
-// How to revers a string in an array
-// function wordMeaning(){
-//     let result ="This ";
-//     let p = "welcome back";
-
-    
-//    result = p.split("").reverse().join("");
-
-// console.log(result);
-
-// }
-// wordMeaning();
-
-// let p = ["wale", "Emmely", "mathew", "kemi", "Rockky"];
-// let result = p.splice(1,2,"justTry");
-// let result = p.slice(2,4);
-
-// sort()  
-let v = ["a", "c", "B", "E", "f"];
-
-// let result = v.sort((a, b)=> a - b);
-// let result = v.sort((a, b)=> 0.5 - Math.random());
-
-// let person =[ 
-//     {
-//     name : "ije",
-//     movie : "africa",
-//     location : "Oka "
-//     }, 
-//     {
-//     name : "faith",
-//     movie : "south africa",
-//     location : "Oka "
-//     },
-//     {
-//     name : "jane",
-//     movie : "ghana",
-//     location : "Oka "
-//     }
-// ];
-
-// let result = person.sort((a, b) => a.name - b.name);
-
-// forEach(callback_function,thisArg) 
-
-// let nv = "";
-// let result = p.forEach(myFunction);
-// function myFunction(value, index, array){
-//   nv += value;
-// }
-
-// console.log(nv);
-// console.log(arguments);
 // :::::::::::::::::::::::::::::::::
 // function wordCounter(str,wrd){
 //   word = new RegExp(wrd,"gi")
@@ -224,45 +94,45 @@ ForEach(); +
 map();+
 filter();+
 reduce();+
-reduceRight();
-every();
-some();
-indexOf();
-lastIndexOf();
-find();
-findIndex();
+reduceRight();+
+every();+
+some();+
+indexOf();+
+lastIndexOf();+
+find();+
+findIndex();+
 
 
 
 */
-let person =[ 
-    {
-    name : "ije",
-    movie : "Nije",
-    location : "Oka "
-    }, 
-    {
-    name : "faith",
-    movie : "south africa",
-    location : "Oka "
-    },
-    {
-    name : "jane",
-    movie : "ghana",
-    location : "Oka "
-    }
-];
+// let person =[ 
+//     {
+//     name : "ije",
+//     movie : "Nije",
+//     location : "Oka "
+//     }, 
+//     {
+//     name : "faith",
+//     movie : "south africa",
+//     location : "Oka "
+//     },
+//     {
+//     name : "jane",
+//     movie : "ghana",
+//     location : "Oka "
+//     }
+// ];
 
-let text = "Gabriel is coming form church and you";
-let letters = [ 'h', 'i', 'j', 'k', "b", "j", 42 , 12, 22, 6, 10];
-let arrNum = [2, 3, 4, 10, 12];
-let r = ['n', 'r', 'd', 'c', 'u', 'b', 'a'];
-let num = 6.1355;
+// let text = "Gabriel is coming form church and you";
+// let letters = [ 'h', 'i', 'j', 'k', "b", "j", 42 , 12, 22, 6, 10];
+// let arrNum = [2, 3, 4, 10, 12];
+// let r = ['n', 'r', 'd', 'c', 'u', 'b', 'a'];
+// let num = 6.1355;
 
-let ayr = [22, 254];
-let nw =[];
-let evenNumbers =[];
-let oddNumbers =[];
+// let ayr = [22, 254];
+// let nw =[];
+// let evenNumbers =[];
+// let oddNumbers =[];
 
 // arrNum.forEach(showArr);
 // function showArr(value){
@@ -272,9 +142,9 @@ let oddNumbers =[];
 //     return oddNumbers.push(--value);
 //   }
 // }
-const showArr = value => value % 2 == 0 ? evenNumbers.push(value) : oddNumbers.push(value) ;
+// const showArr = value => value % 2 == 0 ? evenNumbers.push(value) : oddNumbers.push(value) ;
 
-arrNum.forEach(showArr);
+// arrNum.forEach(showArr);
 
 // let result = arrNum.map(addFn);
 // function addFn(value,index,array){
@@ -353,11 +223,11 @@ arrNum.forEach(showArr);
 // const sum = (previousValue, currentValue, currentIndex, array)=> previousValue > currentValue.time ? previousValue: currentValue.time ;
 // let result = persons.reduce(sum,0);
 
-let p = ["wale", "Emmely", "mathew", "Emmely", "kemi", "Rockky", "mathew", "Emmely"];
+// let p = ["wale", "Emmely", "mathew", "Emmely", "kemi", "Rockky", "mathew", "Emmely"];
 
 // let newArrNum = [2, 4, 6, 3, 2, 5];
-const evenNum = (previousValue, currentValue)=>
-(previousValue + currentValue)  % 2 !== 0 ? previousValue : currentValue;
+// const evenNum = (previousValue, currentValue)=>
+// (previousValue + currentValue)  % 2 !== 0 ? previousValue : currentValue;
 // let result = newArrNum.reduce(evenNum,0);
 
 // console.log(result);
@@ -374,17 +244,17 @@ const evenNum = (previousValue, currentValue)=>
 
 
 // How to remove duplicate value in an array using reduce and indexOf
-const names = [
-	'shibu',
-	'neymar',
-	'vinicius',
-	'pattinson',
-	'ronaldo',
-	'shibu',
-	'neymar',
-	'pattinson',
-	'diCaprio'
-];
+// const names = [
+// 	'shibu',
+// 	'neymar',
+// 	'vinicius',
+// 	'pattinson',
+// 	'ronaldo',
+// 	'shibu',
+// 	'neymar',
+// 	'pattinson',
+// 	'diCaprio'
+// ];
 
 // let onlyName = names.reduce((accumulator, currentValue) => {
 // 	if (accumulator.indexOf(currentValue) ===  -1) {
@@ -416,16 +286,16 @@ const names = [
 
 // let Arm = [[2, 4], [6, 3], [2, 5]];
 
-let fun = (accumulator,currentValue) => accumulator + currentValue;
+// let fun = (accumulator,currentValue) => accumulator + currentValue;
 // let ans = Arm.reduceRight(fun);
 
 // console.log(ans);
 
 // every() the every method checks if all array values pass a test (from callback) and returns a boolean..
 
-let arm = [2, 4, 6, 3, 2, 5];
+// let arm = [2, 4, 6, 3, 2, 5];
 
-let greaterValue = (value, index, array)=> value > 3;
+// let greaterValue = (value, index, array)=> value > 3;
 // let ams = arm.every(greaterValue);
 
 // console.log(ams);
@@ -434,9 +304,9 @@ let greaterValue = (value, index, array)=> value > 3;
 
 // some() the every method checks if all array values pass a test (from callback) and returns a boolean..
 
-let arN = [2, 4, 6, 3, 2, 5];
+// let arN = [2, 4, 6, 3, 2, 5];
 
-let greaterVal = (value, index, array)=> value > 3;
+// let greaterVal = (value, index, array)=> value > 3;
 // let amZ = arN.some(greaterValue);
 
 // console.log(amZ);
@@ -454,7 +324,7 @@ let greaterVal = (value, index, array)=> value > 3;
 
 // lastIndexOf() give the index position of a value in the given array, just indexOf but it performs its operation opposite by starting its process from right to left onlike indexOf() that does its own from left to right and doen't take a callback function to do so...
 
-var fruits = ["Apple", "Orange", "Apple", "Mango"];
+// var fruits = ["Apple", "Orange", "Apple", "Mango"];
 // var a = fruits.lastIndexOf("Orange");
 
 // console.log(a);
@@ -462,19 +332,38 @@ var fruits = ["Apple", "Orange", "Apple", "Mango"];
 
 // The find() method returns the value of the first array element that passes a test function.
 
-var numbers = [4, 9, 16, 25, 29];
-var firstY = numbers.find(myFunction);
+// var numbers = [4, 9, 16, 25, 29];
+// var firstY = numbers.find(myFunction);
 
-function myFunction(value, index, array) {
-  return value > 8;
-} 
+// function myFunction(value, index, array) {
+//   return value > 8;
+// } 
 
-console.log(firstY);
+// console.log(firstY);
 
 // findIndex() method returns the index of the first array element that passes a test function.
 
-var firstO = numbers.findIndex(myWFunction);
+// var firstO = numbers.findIndex(myWFunction);
 
-function myWFunction(value, index, array) {
-  return value > 18;
-} 
+// function myWFunction(value, index, array) {
+//   return value > 18;
+// } 
+
+let date = new Date();
+
+
+// toUTCString();
+
+// toDateString();
+
+// toISOstring();
+
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+date.setMonth(4);
+date.setDate(2);
+
+console.log(months[date.getMonth()]);
+console.log( days[date.getDay()]);
