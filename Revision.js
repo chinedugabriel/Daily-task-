@@ -135,65 +135,81 @@ Math.max()+ // To find the maximum value of an array we use Math.max.apply(null,
 Math.log()+
 Math.log2()+
 Math.log10()+
+***Math.random()+
+===========================
+Boolean+
+Boolean()+
+new Boolean()+
+Comparison and Logical Operators +
+*conditional Statement( if else & else if) +
+*Switch()+ // the switch() uses === which is the strict type, so the data type of the argument most match the case if not nothing would be selected  
 
-Math.random();
+for Loop
+
 */ 
+// console.log(Boolean(2>4));
+let d = new Date();
 
+// How to check the actual day 
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+// console.log(days[d.getDay()] == "Monday");
 
-// console.log(Math.round(-23.45));// returns a number that is nearest to the integer
+function dayChecker(x){
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-// console.log(Math.ceil(23.1)); // 24 returns a number that is grater than the actual value
-
-// console.log(Math.floor(23.1)); // 23 returns a number that is lower than the actual value
-
-// console.log(Math.trunc(23.87)); // returns the integer part of x that is 23
-
-// console.log(Math.sign(-0));// it returns a positive 1 if the number given is a positive value or -1 if the number given is a negative value or 0 if zero given is a positive zero or -0 if the zero given is a negative zero or NaN if it is not a number or a string number 
-
-// console.log(Math.pow(4, 4));
-
-// console.log(Math.sqrt(49));
-
-// console.log(Math.abs(-49));
-
-// console.log(Math.sin(9));
-
-// console.log(Math.cos(49));
-
-// console.log(Math.tan(49));
-
-let arr = [1,34,5,3,77,6];
-// console.log(Math.min.apply(null, arr));
-// console.log(Math.max.apply(null, arr));
-
-// console.log(Math.log(36));
-// console.log(Math.log2(4));
-// console.log(Math.log10(100000));
-
-console.log(Math.random());
-
-// let rst = arr.sort((a,b)=>0.5 - Math.random()) // how to find random values in an array 
-// console.log(rst);
-
-// Math.floor(Math.random() * 11);      // returns a random integer from 0 to 10 
-
-// Math.floor(Math.random() * 100);     // returns a random integer from 0 to 99 
-
-// Math.floor(Math.random() * 101);     // returns a random integer from 0 to 100
-
-// Math.floor(Math.random() * 10) + 1;  // returns a random integer from 1 to 10 
-
-// Math.floor(Math.random() * 100) + 1; // returns a random integer from 1 to 100 
-
-// console.log(Math.floor(Math.random()*10)+1);
-
-// function getRndInteger(min, max) {
-//   return Math.floor(Math.random() * (max - min) ) + min;
-// }
-console.log(getRndInteger(1, 12));
-
-// how to properly find or print random numbers 
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min) ) + min;
+  return days[d.getDay()] == x;
+  // console.log(days[d.getDay()] == "Monday");1
 }
-console.log(getRndInteger(1, 12));
+//  the following will result to false
+// -0
+// ""
+// undefined
+// null
+// false
+//NaN
+// console.log(Boolean(NaN));
+// let x = 9;
+// console.log(x > "waw");
+
+// how to validate age
+function validateAge(age){
+  let requiredAge = 18;
+  return isNaN(age)?"Input is Not a number": age < 18 ? "too young to apply try again at the right age": "you passed the age requirement";
+}
+
+console.log(validateAge(21));
+
+// A simple Function to that Great using days
+
+function whatIsToday(){
+  let day = "";
+  let d =new Date();
+  switch(d.getDay()){
+    case 0:
+      day = "it's Sunday";
+    break;
+    case 1:
+      day ="it's Monday";
+    break;
+    case 2:
+      day = "it's Tuesday";
+    break;
+    case 3:
+      day = "it's Wednesday";
+    break;
+    case 4:
+      day = "it's Thursday";
+    break;
+    case 5:
+      day = "it's Friday";
+    break;
+    case 6:
+      day = "it's Saturday";
+    default : 
+    day = "check your code for the error";
+  }
+  return day;
+  
+};
+
+console.log(whatIsToday());
