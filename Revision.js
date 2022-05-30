@@ -101,269 +101,99 @@ indexOf();+
 lastIndexOf();+
 find();+
 findIndex();+
+Date object+
+Date & Time format+
+how to getDate()+
+how to setDate()+
+=======================
+Date()+
+Date format+
+Get Date()+
+set Date()+
+==================
+math()
+Math properties:
+Math.E        // returns Euler's number +
+Math.PI       // returns PI +
+Math.SQRT2    // returns the square root of 2 +
+Math.SQRT1_2  // returns the square root of 1/2 +
+Math.LN2      // returns the natural logarithm of 2 +
+Math.LN10     // returns the natural logarithm of 10 +
+Math.LOG2E    // returns base 2 logarithm of E +
+Math.LOG10E   // returns base 10 logarithm of E +
+====================
+Math.method()
+Math.round()+
+Math.ceil()+
+Math.floor()+
+Math.trunc()+
+Math.abs()+
+Math.sin()+
+Math.cos()+
+Math.min()+ // To find the minimum value of an array we use Math.min.apply(null, arrayName); 
+Math.max()+ // To find the maximum value of an array we use Math.max.apply(null, arrayName);
+Math.log()+
+Math.log2()+
+Math.log10()+
+
+Math.random();
+*/ 
 
 
+// console.log(Math.round(-23.45));// returns a number that is nearest to the integer
 
-*/
-// let person =[ 
-//     {
-//     name : "ije",
-//     movie : "Nije",
-//     location : "Oka "
-//     }, 
-//     {
-//     name : "faith",
-//     movie : "south africa",
-//     location : "Oka "
-//     },
-//     {
-//     name : "jane",
-//     movie : "ghana",
-//     location : "Oka "
-//     }
-// ];
+// console.log(Math.ceil(23.1)); // 24 returns a number that is grater than the actual value
 
-// let text = "Gabriel is coming form church and you";
-// let letters = [ 'h', 'i', 'j', 'k', "b", "j", 42 , 12, 22, 6, 10];
-// let arrNum = [2, 3, 4, 10, 12];
-// let r = ['n', 'r', 'd', 'c', 'u', 'b', 'a'];
-// let num = 6.1355;
+// console.log(Math.floor(23.1)); // 23 returns a number that is lower than the actual value
 
-// let ayr = [22, 254];
-// let nw =[];
-// let evenNumbers =[];
-// let oddNumbers =[];
+// console.log(Math.trunc(23.87)); // returns the integer part of x that is 23
 
-// arrNum.forEach(showArr);
-// function showArr(value){
-  //   if(value % 2 == 0){
-    //     return evenNumbers.push(++value);
-//   }else{
-//     return oddNumbers.push(--value);
-//   }
+// console.log(Math.sign(-0));// it returns a positive 1 if the number given is a positive value or -1 if the number given is a negative value or 0 if zero given is a positive zero or -0 if the zero given is a negative zero or NaN if it is not a number or a string number 
+
+// console.log(Math.pow(4, 4));
+
+// console.log(Math.sqrt(49));
+
+// console.log(Math.abs(-49));
+
+// console.log(Math.sin(9));
+
+// console.log(Math.cos(49));
+
+// console.log(Math.tan(49));
+
+let arr = [1,34,5,3,77,6];
+// console.log(Math.min.apply(null, arr));
+// console.log(Math.max.apply(null, arr));
+
+// console.log(Math.log(36));
+// console.log(Math.log2(4));
+// console.log(Math.log10(100000));
+
+console.log(Math.random());
+
+// let rst = arr.sort((a,b)=>0.5 - Math.random()) // how to find random values in an array 
+// console.log(rst);
+
+// Math.floor(Math.random() * 11);      // returns a random integer from 0 to 10 
+
+// Math.floor(Math.random() * 100);     // returns a random integer from 0 to 99 
+
+// Math.floor(Math.random() * 101);     // returns a random integer from 0 to 100
+
+// Math.floor(Math.random() * 10) + 1;  // returns a random integer from 1 to 10 
+
+// Math.floor(Math.random() * 100) + 1; // returns a random integer from 1 to 100 
+
+// console.log(Math.floor(Math.random()*10)+1);
+
+// function getRndInteger(min, max) {
+//   return Math.floor(Math.random() * (max - min) ) + min;
 // }
-// const showArr = value => value % 2 == 0 ? evenNumbers.push(value) : oddNumbers.push(value) ;
-
-// arrNum.forEach(showArr);
-
-// let result = arrNum.map(addFn);
-// function addFn(value,index,array){
-//   return sum = value * 2;
-// }
-
-// let result = arrNum.filter(Fn);
-// function Fn(value,index,array){
-//   return sum = value > 22;
-// }
-
-// let rv = [];
-// function test( value, index, array){
-//   return rv.push(value % 2 == 1 ? value:"");
-// }
-// arrNum.forEach(test);
-
-// let result = evenNumbers;
-// const mlt = (value,index,array)=>value % 2 ==1?value:"";
-
-// const mlt = (value,index,array)=>value % 2 ==1?value:"";
-
-// let go = arrNum.map(mlt);
-
-// const mlt = (value,index,array)=>value % 2 == 1;
-
-// let gee = arrNum.filter(mlt);
-
-//how to sum up the values in an array
-// let newArrNum = [2, 4, 6, 3, 5];
-// const sum = (previousValue, currentValue, currentIndex, array)=> previousValue + currentValue ;
-// let result = newArrNum.reduce(sum,0);
-
-// console.log(result);
-
-// how to find the highest value in an array
-// let newArrNum = [2, 4, 6, 3, 25];
-// const sum = (previousValue, currentValue, currentIndex, array)=> previousValue > currentValue ? previousValue : currentValue;
-// let result = newArrNum.reduce(sum,0);
-
-// console.log(result);
-
-// How to find the highest value in an object
-// let persons =[ 
-//     {
-//     name : "ije",
-//     movie : "africa",
-//     location : "Oka ",
-//     time : 10
-//     }, 
-//     {
-//     name : "faith",
-//     movie : "south africa",
-//     location : "Oka ",
-//     time : 2
-//     },
-//     {
-//     name : "jane",
-//     movie : "ghana",
-//     location : "Oka ",
-//     time : 4
-//     }, 
-//     {
-//     name : "faith",
-//     movie : "south africa",
-//     location : "Oka ",
-//     time : 2
-//     },
-//     {
-//       name : "ije",
-//       movie : "africa",
-//       location : "Oka ",
-//       time : 10
-//     }
-// ];
-// const sum = (previousValue, currentValue, currentIndex, array)=> previousValue > currentValue.time ? previousValue: currentValue.time ;
-// let result = persons.reduce(sum,0);
-
-// let p = ["wale", "Emmely", "mathew", "Emmely", "kemi", "Rockky", "mathew", "Emmely"];
-
-// let newArrNum = [2, 4, 6, 3, 2, 5];
-// const evenNum = (previousValue, currentValue)=>
-// (previousValue + currentValue)  % 2 !== 0 ? previousValue : currentValue;
-// let result = newArrNum.reduce(evenNum,0);
-
-// console.log(result);
-
-// How to remove duplicate value in an array using filter and indexOf
-// let newAns = p.filter((value, index)=>p.indexOf(value)=== index);
-
-// console.log(newAns);
-
-// in details explain what this code is doing...
-
-
-// End Here
-
-
-// How to remove duplicate value in an array using reduce and indexOf
-// const names = [
-// 	'shibu',
-// 	'neymar',
-// 	'vinicius',
-// 	'pattinson',
-// 	'ronaldo',
-// 	'shibu',
-// 	'neymar',
-// 	'pattinson',
-// 	'diCaprio'
-// ];
-
-// let onlyName = names.reduce((accumulator, currentValue) => {
-// 	if (accumulator.indexOf(currentValue) ===  -1) {
-// 		accumulator.push(currentValue);
-// 	}
-// 	return accumulator;
-// }, []);
-
-// console.log(onlyName);
-
-// How to remove duplicate value in an array using reduce and indexOf
-// let wuv = p.reduce((previousValue,currentValue)=>{
-//   if(previousValue.indexOf(currentValue) === -1){
-//     previousValue.push(currentValue);
-//   }
-//   return previousValue;
-// },[]);
-
-// console.log(wuv);
-
-// in details explain what this code is doing...
-
-// class work before next class today..
-
-
-// *****************************************************
-
-// The reduceRight() works from right-to-left in the array as it  runs a function on each array element to produce (reduce it to) a single value.
-
-// let Arm = [[2, 4], [6, 3], [2, 5]];
-
-// let fun = (accumulator,currentValue) => accumulator + currentValue;
-// let ans = Arm.reduceRight(fun);
-
-// console.log(ans);
-
-// every() the every method checks if all array values pass a test (from callback) and returns a boolean..
-
-// let arm = [2, 4, 6, 3, 2, 5];
-
-// let greaterValue = (value, index, array)=> value > 3;
-// let ams = arm.every(greaterValue);
-
-// console.log(ams);
-// **note for every all the values most pass the test for it out put to be true..
-
-
-// some() the every method checks if all array values pass a test (from callback) and returns a boolean..
-
-// let arN = [2, 4, 6, 3, 2, 5];
-
-// let greaterVal = (value, index, array)=> value > 3;
-// let amZ = arN.some(greaterValue);
-
-// console.log(amZ);
-
-// **note for some() it returns true even when some of the values in the array doesn't pass the test onlike every that requires all of it values to pass it test...
-
-
-// indexOf() give the index position of a value in the given array and doen't take a callback function to do so...
-
-// var fruits = ["Apple", "Orange", "Apple", "Mango"];
-// var a = fruits.indexOf("Orange");
-
-// console.log(a);
-// End
-
-// lastIndexOf() give the index position of a value in the given array, just indexOf but it performs its operation opposite by starting its process from right to left onlike indexOf() that does its own from left to right and doen't take a callback function to do so...
-
-// var fruits = ["Apple", "Orange", "Apple", "Mango"];
-// var a = fruits.lastIndexOf("Orange");
-
-// console.log(a);
-// End
-
-// The find() method returns the value of the first array element that passes a test function.
-
-// var numbers = [4, 9, 16, 25, 29];
-// var firstY = numbers.find(myFunction);
-
-// function myFunction(value, index, array) {
-//   return value > 8;
-// } 
-
-// console.log(firstY);
-
-// findIndex() method returns the index of the first array element that passes a test function.
-
-// var firstO = numbers.findIndex(myWFunction);
-
-// function myWFunction(value, index, array) {
-//   return value > 18;
-// } 
-
-let date = new Date();
-
-
-// toUTCString();
-
-// toDateString();
-
-// toISOstring();
-
-let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-date.setMonth(4);
-date.setDate(2);
-
-console.log(months[date.getMonth()]);
-console.log( days[date.getDay()]);
+console.log(getRndInteger(1, 12));
+
+// how to properly find or print random numbers 
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+console.log(getRndInteger(1, 12));
