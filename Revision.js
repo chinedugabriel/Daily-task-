@@ -45,7 +45,7 @@ search() +
 //Array {
   find() +
 findIndex() +
-} 
+}
 
 slice() +
 substring()+
@@ -130,7 +130,7 @@ Math.trunc()+
 Math.abs()+
 Math.sin()+
 Math.cos()+
-Math.min()+ // To find the minimum value of an array we use Math.min.apply(null, arrayName); 
+Math.min()+ // To find the minimum value of an array we use Math.min.apply(null, arrayName);
 Math.max()+ // To find the maximum value of an array we use Math.max.apply(null, arrayName);
 Math.log()+
 Math.log2()+
@@ -142,74 +142,145 @@ Boolean()+
 new Boolean()+
 Comparison and Logical Operators +
 *conditional Statement( if else & else if) +
-*Switch()+ // the switch() uses === which is the strict type, so the data type of the argument most match the case if not nothing would be selected  
+*Switch()+ // the switch() uses === which is the strict type, so the data type of the argument most match the case if not nothing would be selected
 
-for Loop
+for Loop+
+for in loop+
+for of loop+
+while loop+
+do while loop+
 
-*/ 
-// console.log(Boolean(2>4));
-let d = new Date();
+Break+
+Continue+
 
-// How to check the actual day 
+
+*/
+
+
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-// console.log(days[d.getDay()] == "Monday");
 
-function dayChecker(x){
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+// let result = [];
 
-  return days[d.getDay()] == x;
-  // console.log(days[d.getDay()] == "Monday");1
-}
-//  the following will result to false
-// -0
-// ""
-// undefined
-// null
-// false
-//NaN
-// console.log(Boolean(NaN));
-// let x = 9;
-// console.log(x > "waw");
+// for(let i = 0; i < days.length;i++){
+//   result.push(days[i]+2);
+// }
 
-// how to validate age
-function validateAge(age){
-  let requiredAge = 18;
-  return isNaN(age)?"Input is Not a number": age < 18 ? "too young to apply try again at the right age": "you passed the age requirement";
-}
+// console.log(result);
 
-console.log(validateAge(21));
+// let num = 10;
+// let rst = "";
 
-// A simple Function to that Great using days
+// for(let i = 10; i>0; i--){
+//   rst += i;
+// }
+// console.log(rst);
 
-function whatIsToday(){
-  let day = "";
-  let d =new Date();
-  switch(d.getDay()){
-    case 0:
-      day = "it's Sunday";
-    break;
-    case 1:
-      day ="it's Monday";
-    break;
-    case 2:
-      day = "it's Tuesday";
-    break;
-    case 3:
-      day = "it's Wednesday";
-    break;
-    case 4:
-      day = "it's Thursday";
-    break;
-    case 5:
-      day = "it's Friday";
-    break;
-    case 6:
-      day = "it's Saturday";
-    default : 
-    day = "check your code for the error";
-  }
-  return day;
-  
+// =================================
+// for in loop
+
+// let rst = [];
+// let y;
+
+let person = {
+  name : "Gabriel",
+  age : "26",
+  sex : "male",
+  state : "Anambra"
 };
 
-console.log(whatIsToday());
+
+// for (y in person){
+  //   rst.push(person[y]);
+  //   console.log(y);
+  // }
+
+  // console.log(rst);
+
+  // ===============================
+  // for of loop
+
+  // for( y of days){
+  //   rst.push(y);
+  //   // console.log(y)
+  // }
+  // console.log(rst);
+// let num = "12746239328";
+//   let str = "sebastin chinedu gabriel";
+//   let jks = "";
+//   let i;
+  // for(i of str){
+  //   jks += i;
+  // }
+
+  // while loop
+  // let sh = "";
+  // let i = 0;
+
+  // while(i <= 10){
+  //   sh += i;
+  //   i++
+  // }
+  // console.log(sh);
+
+  // do while Loop
+
+  // do{
+  //   sh += i;
+  //   i++
+  // }
+  // while(i == 10);
+  // console.log(sh);
+
+
+// let result = 0;
+
+// for (let i = 0; i < 10; i++){
+  //   if (i === 3){break;}
+  //   result += i;
+  // }
+  
+  // console.log(result);
+  // for (let i = 0; i < 10; i++){
+    //   if (i === 3){continue;}
+    //   result += i;
+    // }
+    
+    // console.log(result);
+    
+// let multiArr = [[2,1],[2,5],[4,5]];
+// let result = 0;
+
+// for(let i = 0; i < multiArr.length; i++){
+  //   for(let j = 0; j < multiArr[i].length; j++){
+    //     result += multiArr[i][j];
+    //   }
+    // }
+    
+    // console.log(result);
+    
+let multiArr = [[2,1],[2,5],[4,5]];
+let result = 0;
+
+let i = 0;
+let j = 0;
+for( i of multiArr){
+  for(j of i){
+    if( j === 4){
+      break;
+    }
+    result += j;
+  }
+}
+
+console.log(result);//10
+
+for( i of multiArr){
+  for(j of i){
+    if( j === 4){
+      continue;
+    }
+    result += j;
+  }
+}
+
+console.log(result);//15
