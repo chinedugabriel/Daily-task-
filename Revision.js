@@ -149,37 +149,23 @@ for in loop+
 for of loop+
 while loop+
 do while loop+
-
 Break+
 Continue+
 
+Type Conversion+
+Bitwise Operation+
+Regular Expression(RegExp)+
+Errors(try{throw},catch(){},finally)+
+Scope+
+Hoisting+
+Set()
+Maps()
 
 */
 
 
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-// let result = [];
-
-// for(let i = 0; i < days.length;i++){
-//   result.push(days[i]+2);
-// }
-
-// console.log(result);
-
-// let num = 10;
-// let rst = "";
-
-// for(let i = 10; i>0; i--){
-//   rst += i;
-// }
-// console.log(rst);
-
-// =================================
-// for in loop
-
-// let rst = [];
-// let y;
 
 let person = {
   name : "Gabriel",
@@ -187,100 +173,180 @@ let person = {
   sex : "male",
   state : "Anambra"
 };
-
-
-// for (y in person){
-  //   rst.push(person[y]);
-  //   console.log(y);
-  // }
-
-  // console.log(rst);
-
-  // ===============================
-  // for of loop
-
-  // for( y of days){
-  //   rst.push(y);
-  //   // console.log(y)
-  // }
-  // console.log(rst);
-// let num = "12746239328";
-//   let str = "sebastin chinedu gabriel";
-//   let jks = "";
-//   let i;
-  // for(i of str){
-  //   jks += i;
-  // }
-
-  // while loop
-  // let sh = "";
-  // let i = 0;
-
-  // while(i <= 10){
-  //   sh += i;
-  //   i++
-  // }
-  // console.log(sh);
-
-  // do while Loop
-
-  // do{
-  //   sh += i;
-  //   i++
-  // }
-  // while(i == 10);
-  // console.log(sh);
-
-
-// let result = 0;
-
-// for (let i = 0; i < 10; i++){
-  //   if (i === 3){break;}
-  //   result += i;
-  // }
-  
-  // console.log(result);
-  // for (let i = 0; i < 10; i++){
-    //   if (i === 3){continue;}
-    //   result += i;
-    // }
-    
-    // console.log(result);
     
 // let multiArr = [[2,1],[2,5],[4,5]];
 // let result = 0;
 
-// for(let i = 0; i < multiArr.length; i++){
-  //   for(let j = 0; j < multiArr[i].length; j++){
-    //     result += multiArr[i][j];
-    //   }
-    // }
-    
-    // console.log(result);
-    
-let multiArr = [[2,1],[2,5],[4,5]];
-let result = 0;
+// console.log(Number("38"));
+// console.log(String(256));
+// console.log("typeof".constructor);
+// console.log((2421).constructor);
+// console.log([2421].constructor);
 
-let i = 0;
-let j = 0;
-for( i of multiArr){
-  for(j of i){
-    if( j === 4){
-      break;
-    }
-    result += j;
-  }
-}
+// You can check the constructor property to find out if an object is an Array (contains the word "Array"):
 
-console.log(result);//10
+// function isArray(myArray){
+//   return myArray.constructor.toString().indexOf("Array") > -1;
+// }
 
-for( i of multiArr){
-  for(j of i){
-    if( j === 4){
-      continue;
-    }
-    result += j;
-  }
-}
+// Or even simpler, you can check if the object is an Array function:
 
-console.log(result);//15
+// function isArray(myArray){
+//   return myArray.constructor === Array;
+// }
+
+// console.log(isArray(days));
+
+
+
+// You can check the constructor property to find out if an object is a Date (contains the word "Date"):
+
+// function isDate(myDate){
+//   return myDate.constructor.toString().indexOf("Date") > -1;
+// }
+
+// Or even simpler, you can check if the object is a Date function:
+
+// function isDate(myDate){
+//   return myDate.constructor === Date;
+// }
+
+// console.log(String(2+2))
+// console.log((2+2).toString)
+// console.log((243).toExponential(4));
+// console.log((24324).toFixed(1));
+
+// let a = 5;
+// let b = 0;
+
+// Converting Decimal to Binary
+
+// function decimal2bin(dc){
+//   return (dc >>> 0).toString(2);
+// }
+// console.log(decimal2bin(22));
+
+// Converting Binary to Decimal
+
+
+// function bin2decimal(dc){
+//   return parseInt(dc, 2).toString(10);
+// }
+// console.log(bin2decimal(11010));
+
+/*
+Regular Expression:
+A regular expression is a sequence of characters that forms a search pattern.
+*/
+
+let str = "this boy came on monday with an expression at monday's fellowship";
+let numb = "45275389345";
+
+// console.log(str.search(/s/[s]));
+// console.log(str.replace(/monday/ig, "new word"));
+// console.log(/e/.test(str));
+// console.log(/e/g.exec(str));
+
+
+// start form Regular expression before you do Errors 
+/*
+search()
+replace(,)
+test()
+exec()
+match()
+
+*/
+// let result = str.search(/P/i);
+// let result = str.replace(/Ya/ig,"P");
+// let result = str.replace(/[Ya]/ig,"P");
+// let result = str.replace(/[a|d]/ig,"P");
+// let result = numb.replace(/[2-4]/ig,"F");
+// let result = /5/.test(numb);
+// console.log(result);
+
+/*  JavaScript try and catch
+
+The try statement allows you to define a block of code to be tested for errors while it is being executed.
+
+The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+The JavaScript statements try and catch come in pairs:
+
+**** Error Name Values ****
+Six different values can be returned by the error name property:
+
+Error Name |	Description
+EvalError |	An error has occurred in the eval() function
+RangeError |	A number "out of range" has occurred
+ReferenceError |	An illegal reference has occurred
+SyntaxError |	A syntax error has occurred
+TypeError |	A type error has occurred
+URIError |	An error in encodeURI() has occurred
+
+*/
+
+
+// try{
+//   if(naomi == undefined) ;
+//   throw "you didn't define your variable";
+// }
+// catch(err){
+//   console.log(err.message);
+// }
+// finally{
+
+// }
+// let mam = "woman";
+// let mam = "mom";
+
+// console.log(mam);
+
+// function input(str){
+// try{
+//   if(str === undefined){
+//     throw "type in a string in the fn you called";
+//   }
+//   if(str.constructor.toString().indexOf("Number") > -1)
+//   {
+//     throw " input a string not a number pls!!!"
+//   }
+//   if(str.constructor.toString().indexOf("Array") > -1)
+//   {
+//     throw " input a string not a Array pls!!!"
+//   }
+//   if(str.constructor.toString().indexOf("Object") > -1)
+//   {
+//     throw " input a string not a object pls!!!"
+//   }
+  
+// }catch(err){
+//   return err;
+// }
+
+// }
+
+// console.log(input("iuhj"));
+
+// let i = 556.3;
+// try{
+//   let i =234;
+//   let i =234;
+// }
+// catch(err){
+//   console.log(err.name)// ReferenceError
+// }
+
+// let i = 334;
+// try{
+//   i = t + 1;
+// }
+// catch(err){
+//   console.log(err.message)// ReferenceError
+// }
+// let t = 33;
+
+/* Hoisting
+Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+*/
+
