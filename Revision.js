@@ -158,8 +158,8 @@ Regular Expression(RegExp)+
 Errors(try{throw},catch(){},finally)+
 Scope+
 Hoisting+
-Set()
-Maps()
+Set()+
+Maps()+
 
 */
 
@@ -174,179 +174,99 @@ let person = {
   state : "Anambra"
 };
     
-// let multiArr = [[2,1],[2,5],[4,5]];
-// let result = 0;
+// Sets
 
-// console.log(Number("38"));
-// console.log(String(256));
-// console.log("typeof".constructor);
-// console.log((2421).constructor);
-// console.log([2421].constructor);
+// Essential Set Methods
+// Method	Description
+// new Set()	Creates a new Set
+// add()	Adds a new element to the Set
+// delete()	Removes an element from a Set
+// has()	Returns true if a value exists in the Set
+// forEach()	Invokes a callback for each element in the Set
+// values()	Returns an iterator with all the values in a Set
+// Property	Description
+//size	Returns the number of elements in a Set
 
-// You can check the constructor property to find out if an object is an Array (contains the word "Array"):
+// const setArr = new Set(days);
+// setArr.add("BronchDay");
+// setArr.add("PartyDay");
+// setArr.add("CoddingDay");
+// setArr.add("BronchDay");
+// setArr.add("PartyDay");
+// setArr.add("CoddingDay");
 
-// function isArray(myArray){
-//   return myArray.constructor.toString().indexOf("Array") > -1;
+// let del = setArr.delete("CoddingDay");
+
+// console.log(setArr.size);
+// console.log(setArr.values());
+// console.log(del);
+// setArr.clear();
+// console.log(setArr);
+
+
+// let t =[];
+// let r;
+// for (r of setArr){
+//   t.push(r);
+//   // console.log(r);
 // }
-
-// Or even simpler, you can check if the object is an Array function:
-
-// function isArray(myArray){
-//   return myArray.constructor === Array;
-// }
-
-// console.log(isArray(days));
+// console.log(t);
 
 
 
-// You can check the constructor property to find out if an object is a Date (contains the word "Date"):
-
-// function isDate(myDate){
-//   return myDate.constructor.toString().indexOf("Date") > -1;
-// }
-
-// Or even simpler, you can check if the object is a Date function:
-
-// function isDate(myDate){
-//   return myDate.constructor === Date;
-// }
-
-// console.log(String(2+2))
-// console.log((2+2).toString)
-// console.log((243).toExponential(4));
-// console.log((24324).toFixed(1));
-
-// let a = 5;
-// let b = 0;
-
-// Converting Decimal to Binary
-
-// function decimal2bin(dc){
-//   return (dc >>> 0).toString(2);
-// }
-// console.log(decimal2bin(22));
-
-// Converting Binary to Decimal
-
-
-// function bin2decimal(dc){
-//   return parseInt(dc, 2).toString(10);
-// }
-// console.log(bin2decimal(11010));
-
+// Maps();
 /*
-Regular Expression:
-A regular expression is a sequence of characters that forms a search pattern.
-*/
-
-let str = "this boy came on monday with an expression at monday's fellowship";
-let numb = "45275389345";
-
-// console.log(str.search(/s/[s]));
-// console.log(str.replace(/monday/ig, "new word"));
-// console.log(/e/.test(str));
-// console.log(/e/g.exec(str));
-
-
-// start form Regular expression before you do Errors 
-/*
-search()
-replace(,)
-test()
-exec()
-match()
-
-*/
-// let result = str.search(/P/i);
-// let result = str.replace(/Ya/ig,"P");
-// let result = str.replace(/[Ya]/ig,"P");
-// let result = str.replace(/[a|d]/ig,"P");
-// let result = numb.replace(/[2-4]/ig,"F");
-// let result = /5/.test(numb);
-// console.log(result);
-
-/*  JavaScript try and catch
-
-The try statement allows you to define a block of code to be tested for errors while it is being executed.
-
-The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
-
-The JavaScript statements try and catch come in pairs:
-
-**** Error Name Values ****
-Six different values can be returned by the error name property:
-
-Error Name |	Description
-EvalError |	An error has occurred in the eval() function
-RangeError |	A number "out of range" has occurred
-ReferenceError |	An illegal reference has occurred
-SyntaxError |	A syntax error has occurred
-TypeError |	A type error has occurred
-URIError |	An error in encodeURI() has occurred
-
-*/
+Essential Map Methods
+Method |	Description
+new Map() |	Creates a new Map
+set() |	Sets the value for a key in a Map
+get() |	Gets the value for a key in a Map
+delete() |	Removes a Map element specified by the key
+has() |	Returns true if a key exists in a Map
+forEach() |	Calls a function for each key/value pair in a Map
+entries() |	Returns an iterator with the [key, value] pairs in a Map
+Property |	Description
+size |	Returns the number of elements in a Map
+*/ 
 
 
-// try{
-//   if(naomi == undefined) ;
-//   throw "you didn't define your variable";
-// }
-// catch(err){
-//   console.log(err.message);
-// }
-// finally{
 
-// }
-// let mam = "woman";
-// let mam = "mom";
+let  multiArr =[["name","alfred"],["BetFriend","bayo"],[72,"true"]];
 
-// console.log(mam);
+let tsMap = new Map();
+// tsMap.set(multiArr);
+tsMap.set("name", "alfred");
+tsMap.set("bestFriend","bayo");
+tsMap.set(72, "true");
+// console.log(tsMap);
+// tsMap.delete(72);
+// console.log(tsMap.get("name"));
+// console.log(tsMap.size);
+// console.log(tsMap.has("72"));
 
-// function input(str){
-// try{
-//   if(str === undefined){
-//     throw "type in a string in the fn you called";
+// console.log(person.length);
+// let y;
+// let srt = "";
+// tsMap.forEach((value,key)=>srt +="\n"+ key + " = "+ value);
+
+
+// console.log(srt);
+// console.log(tsMap.entries())
+
+// let t;
+// let k;
+// let m = [];
+// for (t of tsMap.entries()){
+//   // k.push(t);
+//   for (k of t){
+//     m.push(k);
 //   }
-//   if(str.constructor.toString().indexOf("Number") > -1)
-//   {
-//     throw " input a string not a number pls!!!"
-//   }
-//   if(str.constructor.toString().indexOf("Array") > -1)
-//   {
-//     throw " input a string not a Array pls!!!"
-//   }
-//   if(str.constructor.toString().indexOf("Object") > -1)
-//   {
-//     throw " input a string not a object pls!!!"
-//   }
-  
-// }catch(err){
-//   return err;
 // }
+// console.log(m);
+let p = [];
+days.forEach((value,index)=> p.push([index,value]));
+// console.log(p);
 
-// }
-
-// console.log(input("iuhj"));
-
-// let i = 556.3;
-// try{
-//   let i =234;
-//   let i =234;
-// }
-// catch(err){
-//   console.log(err.name)// ReferenceError
-// }
-
-// let i = 334;
-// try{
-//   i = t + 1;
-// }
-// catch(err){
-//   console.log(err.message)// ReferenceError
-// }
-// let t = 33;
-
-/* Hoisting
-Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
-*/
+let P_map = new Map(p);
+// console.log(P_map.constructor.toString().indexOf("Map") > -1);
 
