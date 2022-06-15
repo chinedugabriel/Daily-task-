@@ -185,76 +185,15 @@ JSON is text, written with JavaScript object notation.
 
 // step 1 
 // you will need an object 
-let person = {
-  name : "Gabriel",
-  age : "26",
-  sex : "male",
-  state : "Anambra"
-};
+// let person = {
+//   name : "Gabriel",
+//   age : "26",
+//   sex : "male",
+//   state : "Anambra"
+// };
 
-// step 2 
-// you can then convert that object into a JSON (string) using the JSON.stringify(x) method which is usually used for sending data.
-// When exchanging data between a browser and a server, the data can only be text.
+// let student = JSON.stringify(person);
+// localStorage.setItem("school", student);
 
-// JSON is text, and we can convert any JavaScript object into JSON, and send JSON to the server.
+// console.log(JSON.parse(student));
 
-//convert_object_to_string 
-let myJson_st = JSON.stringify( person );
-
-console.log(myJson_st);// javascript has converted the object into a string
-
-let myJson_Ob = JSON.parse(myJson_st);
-console.log(myJson_Ob);
-
-
-// storing Data in local storage
-// When storing data, the data has to be a certain format, and regardless of where you choose to store it, text is always one of the legal formats.
-
-// how to store data in local storage
-localStorage.setItem("dataPerson", myJson_st);
-
-// how to retrieve data from local storage
-let viewData = localStorage.getItem("dataPerson");
-// after retrieving the data you convert the data back to an object
-let retrievedData = JSON.parse(viewData);
-console.log(retrievedData);
-
-let obj = {
-  key : "value"
-};
-
-// JSON Strings
-
-// Strings in JSON must be written in double quotes.
-// Example
-{ "name" : "John" };
-// JSON Numbers
-
-// Numbers in JSON must be an integer or a floating point.
-// Example
-
-// JSON Object
-{
-  "obj" : {"key":"value"}
-};
-// JSON Array
-{
-  "obj" : ["value1","value2"]
-};
-
-// JSON Booleans
-
-// Values in JSON can be true/false.
-// Example
-{ "sale" : true };
-// JSON null
-
-// Values in JSON can be null.
-// Example
-{ "middlename" : null };
-
-// Use the JavaScript function JSON.parse() to convert text into a JavaScript object:
-var obj = JSON.parse( '{ "name":"John", "age":30, "city":"New York"}' );
-
-// Debugging in Javascript
-// Debugging is the act of searching and fixing errors..
