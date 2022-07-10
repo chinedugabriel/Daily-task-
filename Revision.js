@@ -187,117 +187,8 @@ Promises
 Async / Await
 
 
-
-
-
 */
 
-
-
-// let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-
-// =============javascript callbacks============
-// A callback is a function passed as an argument to another function.
-
-// function showME(name){
-//  console.log(name);
-// }
-
-// console.log(showME());
-
-// function sum(a, b, myCallback) {
-//   let addUp  = a + b;
-//   myCallback(addUp)
-// }
-
-// sum(5,2,showME);
-
-// same as 
-// sum(5,2, function showME(name){console.log(name)});
-
-// function displayOnConsole(x){
-//   console.log(x);
-// }
-
-// function multiply(a, b, fun){
-//   let result = a * b;
-//   fun(result);
-// }
-
-// multiply(2, 2, displayOnConsole);
-// multiply(2, 2, function displayOnConsole(x){console.log(x);});
-
-
-
-/* Functions running in parallel with other functions are called asynchronous.
-
- A good example is JavaScript setTimeout()
-
- Waiting for a Timeout
-
-When using the JavaScript function setTimeout(), you can specify a callback function to be executed on time-out:
-*/
-
-// function callMe(){
-//   console.log("Gabriel");
-// }
-
-// setTimeout(callMe, 2000);
-
-
-/*
-Waiting for Intervals:
-
-When using the JavaScript function setInterval(), you can specify a callback function to be executed for each interval:
-*/ 
-
-
-// function countTime(){
-//   console.log("Hello world");
-  
-// }
-
-// setInterval(countTime, 1000);
-
-
-// callBacks
-// function callBacks(txt1,txt2,a,b){
-//   let t1 = txt1;
-//   let t2 = txt2;
-//   a(t1);
-//   b(t2);
-// }
-
-// function step1(x){
-//   console.log(x)
-// } 
-// function step2(x){
-//   console.log(x)
-// }
-
-// callBacks("I a greatful", "not just for now but for all ways",step1,step2);
-
-
-
-// callback Hell!!
-
-
-// setTimeout( 
-//   ()=>{console.log("Please Wait while we process your Data")
-//   let data = false;
-//   setTimeout(
-//       () => { if (data == true){console.log("Your data has passed Stage 1... \n Waiting for stage 2")
-//         setTimeout(() =>{ console.log("You are cleared for the Job") 
-
-//         },3000)}
-//       else{
-//         console.log("You don't have any data here for you")}} 
-//     ,3000);
-// },2000);
-
-
-// setInterval(()=> console.log(`It's Time`), 2000);
 
 
 // Javascript Promise Object
@@ -324,3 +215,214 @@ When using the JavaScript function setInterval(), you can specify a callback fun
   //   function(value){showInConsole(value);},
   //   function(error){showInConsole(error);}
   // );
+/*
+  let mrPromise = new Promise((resolve, reject)=>{
+    let name = true;
+    if(name == true){
+      setTimeout(() => {resolve("Yes name was found in records"); }, 3000);
+      
+    }else{
+      reject(new Error("not found Pls register"));
+    }
+  });
+
+  mrPromise.then(
+    (value) => {console.log(value)},
+    (error) => {console.error(error)}
+  );
+
+
+  let promise = new Promise(function(resolve, reject) {
+    setTimeout(() => resolve("done!"), 1000);
+    reject(new Error("not found"));
+  });
+  
+  // resolve runs the first function in .then
+  promise.then(
+    result => console.log(result), // shows "done!" after 1 second
+    error => console.log(error) // doesn't run
+  );
+
+  // If we’re interested only in successful completions, then we can provide only one function argument to .then:
+  
+
+  let missPromise = new Promise(function(resolve) {
+    setTimeout(() => resolve("done!"), 1000);
+    
+  });
+  
+  // resolve runs the first function in .then
+  missPromise.then(
+    result => console.log(result), // shows "done!" after 1 second
+    // error => console.log(error) // doesn't run
+  );
+
+  */
+
+  // let errPromiseThen = new Promise(function(resolve,reject) {
+  //   reject(new Error("not found in Promise.then"))
+    
+  // });
+  
+  // // resolve runs the first function in .catch
+  // errPromiseThen.then(
+  //   null,
+  //   error => console.log(error) 
+  // );
+  
+  // let errPromise = new Promise(function(resolve,reject) {
+  //   reject(new Error("not found in Promise"))
+    
+  // })
+  
+  // .finally(
+  //   ()=> console.log("this would run anyways")
+  // );
+  
+  // // resolve runs the first function in .catch
+  // errPromise.catch(
+  //   error => console.log(error) 
+  // );
+  
+
+  // A function to load a script
+  /*
+ function loadScript(src){
+  return new Promise((resolve, reject)=>{
+    let script = document.createElement("script");
+    script.src = src;
+    script.onload = () => resolve(script);
+    script.onerror = ()=> reject(new Error(`Script load error for ${src}`))
+    
+    document.head.append(script);
+  });
+ }
+
+let scriptLoaderPromise = loadScript("https://google.com");
+
+scriptLoaderPromise.then(
+  result => console.log(`${script.scr} was loaded successfully`),
+  error => console.error("script failed to load")
+);
+
+*/
+
+// write a promise to validate a number and its resolve should output "the number that was validated" while it reject should say "we want numbers here" when its is not a valid number.
+// for example, 
+
+// 45 is an actual number; // resolve
+
+// we want numbers here // reject
+
+// let validateNum = (n) => {
+//   return new Promise((resolve,reject) => {
+//     let pValue = n;
+    
+//     let num =(n) =>{ 
+//       let result = "";
+//       let convertNum = Number(n);
+//       if (convertNum.toString() === "NaN"){
+//         result = `not valid`;
+//       }else{
+//      result = Number(n);
+//     }
+//     return result;
+//     };
+
+//     let Vnum = num(pValue);
+
+//   let testNumber = Vnum ;
+
+// if ( typeof testNumber == "number"){
+//   resolve(`${testNumber} is an actual number`);
+// }else{
+//   reject("We want numbers here");
+// }
+
+// });
+// }
+
+// let checkNumber = (n) => validateNum(n)
+
+// .then(
+//   value=>console.log(value),
+//   error=>console.error(error)
+// );
+
+
+// num.then(
+//   null,
+//   error=>console.error(error)
+// );
+
+// num.catch((error)=>console.error(error));
+
+// console.log(typeof "33" == "number")
+
+// let num = "34";
+// console.log(num.constructor.toString().indexOf("Number") > -1);
+
+
+
+
+
+
+// ------------------OR------------------
+
+// how do I write a promise to validate a number and it resolve should output "the number that was validated" while it reject should say "we want numbers here" when its is not a valid number.
+// for example, 
+
+// 45 is an actual number; // resolve
+
+// we want numbers here // reject
+
+// let validateNum = (n) => {
+//   return new Promise((resolve,reject) => {
+//     let testNumber = Number(n);
+   
+// if ( typeof testNumber == "number" && testNumber.toString() !== "NaN"){
+//   resolve(`${testNumber} is an actual number`);
+// }else{
+//   reject("We want numbers here");
+// }
+
+// });
+// }
+
+
+// let checkNumber = (n) => validateNum(n)
+
+// .then(
+//   value=>console.log(value),
+//   error=>console.error(error)
+//   );
+  
+
+// let validateNumber = (n) => {
+//   return new Promise((resolve,reject) => {
+//     let testNumber = Number(n);
+   
+//   if (isNaN(testNumber)){
+//   reject("We want numbers here");
+//   }else{
+//   resolve(`${testNumber} is an actual number`);
+// }
+
+// });
+// }
+
+
+// let checkNumber = (n) => validateNumber(n)
+
+// .then(
+//   value => console.log(value),
+//   error => console.error(error)
+//   );
+  
+  
+//   checkNumber("23.09");
+//   checkNumber(42);
+//   checkNumber(NaN);
+//   checkNumber("waawoo");
+
+
