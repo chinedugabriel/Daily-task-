@@ -169,9 +169,9 @@ Object Accessors+
 Object Constructors+
 Object Prototypes+
 Object Iterables+
-Object Sets
-Object Maps
-Object Reference
+Object Sets+
+Object Maps+
+Object Reference+
 
 JS Functions
 Function Definitions +
@@ -183,479 +183,19 @@ Function Closures+
 
 CallBack+
 Asynchronous+
-Promises
-Async / Await
+Promises+
+Async / Await+
+Fetch
 
 
 */
 
 
-
-// Javascript Promise Object
-// let myPromise = new Promise(function(myResolve, myReject){
-
-  //   myResolve();
-  //   myReject();
-  // })
-  
-  // myPromise.then(
-  //   function(value){/* code if successful */};
-  //   function(error){/* code if some error */};
-  // )
-  
-  
-  
-  // let learnPromise = new Promise(function(myResolve,myReject){
-  //   let i = 2;
-  //   i == 3? myResolve("it worked"): myReject("it failed");
-  // });
-  
-  
-  // learnPromise.then(
-  //   function(value){showInConsole(value);},
-  //   function(error){showInConsole(error);}
-  // );
-/*
-  let mrPromise = new Promise((resolve, reject)=>{
-    let name = true;
-    if(name == true){
-      setTimeout(() => {resolve("Yes name was found in records"); }, 3000);
-      
-    }else{
-      reject(new Error("not found Pls register"));
-    }
-  });
-
-  mrPromise.then(
-    (value) => {console.log(value)},
-    (error) => {console.error(error)}
-  );
-
-
-  let promise = new Promise(function(resolve, reject) {
-    setTimeout(() => resolve("done!"), 1000);
-    reject(new Error("not found"));
-  });
-  
-  // resolve runs the first function in .then
-  promise.then(
-    result => console.log(result), // shows "done!" after 1 second
-    error => console.log(error) // doesn't run
-  );
-
-  // If we’re interested only in successful completions, then we can provide only one function argument to .then:
-  
-
-  let missPromise = new Promise(function(resolve) {
-    setTimeout(() => resolve("done!"), 1000);
-    
-  });
-  
-  // resolve runs the first function in .then
-  missPromise.then(
-    result => console.log(result), // shows "done!" after 1 second
-    // error => console.log(error) // doesn't run
-  );
-
-  */
-
-  // let errPromiseThen = new Promise(function(resolve,reject) {
-  //   reject(new Error("not found in Promise.then"))
-    
-  // });
-  
-  // // resolve runs the first function in .catch
-  // errPromiseThen.then(
-  //   null,
-  //   error => console.log(error) 
-  // );
-  
-  // let errPromise = new Promise(function(resolve,reject) {
-  //   reject(new Error("not found in Promise"))
-    
-  // })
-  
-  // .finally(
-  //   ()=> console.log("this would run anyways")
-  // );
-  
-  // // resolve runs the first function in .catch
-  // errPromise.catch(
-  //   error => console.log(error) 
-  // );
-  
-
-  // A function to load a script
-  /*
- function loadScript(src){
-  return new Promise((resolve, reject)=>{
-    let script = document.createElement("script");
-    script.src = src;
-    script.onload = () => resolve(script);
-    script.onerror = ()=> reject(new Error(`Script load error for ${src}`))
-    
-    document.head.append(script);
-  });
- }
-
-let scriptLoaderPromise = loadScript("https://google.com");
-
-scriptLoaderPromise.then(
-  result => console.log(`${script.scr} was loaded successfully`),
-  error => console.error("script failed to load")
-);
-
-*/
-
-// write a promise to validate a number and its resolve should output "the number that was validated" while it reject should say "we want numbers here" when its is not a valid number.
-// for example, 
-
-// 45 is an actual number; // resolve
-
-// we want numbers here // reject
-
-// let validateNum = (n) => {
-//   return new Promise((resolve,reject) => {
-//     let pValue = n;
-    
-//     let num =(n) =>{ 
-//       let result = "";
-//       let convertNum = Number(n);
-//       if (convertNum.toString() === "NaN"){
-//         result = `not valid`;
-//       }else{
-//      result = Number(n);
-//     }
-//     return result;
-//     };
-
-//     let Vnum = num(pValue);
-
-//   let testNumber = Vnum ;
-
-// if ( typeof testNumber == "number"){
-//   resolve(`${testNumber} is an actual number`);
-// }else{
-//   reject("We want numbers here");
-// }
-
-// });
-// }
-
-// let checkNumber = (n) => validateNum(n)
-
-// .then(
-//   value=>console.log(value),
-//   error=>console.error(error)
-// );
-
-
-// num.then(
-//   null,
-//   error=>console.error(error)
-// );
-
-// num.catch((error)=>console.error(error));
-
-// console.log(typeof "33" == "number")
-
-// let num = "34";
-// console.log(num.constructor.toString().indexOf("Number") > -1);
-
-
-
-
-
-
-// ------------------OR------------------
-
-// how do I write a promise to validate a number and it resolve should output "the number that was validated" while it reject should say "we want numbers here" when its is not a valid number.
-// for example, 
-
-// 45 is an actual number; // resolve
-
-// we want numbers here // reject
-
-// let validateNum = (n) => {
-//   return new Promise((resolve,reject) => {
-//     let testNumber = Number(n);
-   
-// if ( typeof testNumber == "number" && testNumber.toString() !== "NaN"){
-//   resolve(`${testNumber} is an actual number`);
-// }else{
-//   reject("We want numbers here");
-// }
-
-// });
-// }
-
-
-// let checkNumber = (n) => validateNum(n)
-
-// .then(
-//   value=>console.log(value),
-//   error=>console.error(error)
-//   );
-  
-
-// let validateNumber = (n) => {
-//   return new Promise((resolve,reject) => {
-//     let testNumber = Number(n);
-   
-//   if (isNaN(testNumber)){
-//   reject("We want numbers here");
-//   }else{
-//   resolve(`${testNumber} is an actual number`);
-// }
-
-// });
-// }
-
-
-// let checkNumber = (n) => validateNumber(n)
-
-// .then(
-//   value => console.log(value),
-//   error => console.error(error)
-//   );
-  
-  
-//   checkNumber("23.09");
-//   checkNumber(42);
-//   checkNumber(NaN);
-//   checkNumber("waawoo");
-
-/*
-let names = function (x){
-  return new Promise((resolve,reject)=>{
-    let inputName = x;
-    if (typeof inputName === 'string'){
-      resolve(`${inputName} is a string`);
-    }else{
-      reject(new Error("text only"));
-    }
-  });
-}
-
-let checkNames = (x) => names(x)
-.then(
-  value => console.log(value),
-  error => console.log(error)
-  )
-  .finally(
-    setTimeout(() => {
-      console.log("Thanks for coming");
-    },1000)
-  );
-
-  checkNames("423");
-
-  // If we’re interested only in errors
-  
-  let staffNames = new Promise((resolve,reject) => {
-    // resolve();
-    reject("Error");
-  })
-// .then(
-//   null,
-//   (error)=> console.log(error)
-//   );
-  
-  .catch(
-  (error)=> console.log(error)
-  );
-
-*/
-
-  // function showConsole(x){//this function is used as a callback
-  //   console.log(x);
-  // }
-
-  // let test = new Promise(resolve =>{
-  //   resolve("we just resolved our promise");
-  // })
-
-  // test.then(value => console.log(value + " next task"));
-  // test.then(showConsole);
-
-  // // A promise that displays it's resolve in 3 seconds
-  // function delay(ms){
-  //   return new Promise((resolve) =>{
-  //     setTimeout(resolve("coding is life"),ms)
-  //   });
-  // }
-
-  // delay(4000).then(
-  //   (value) => console.log(value)
-  // )
-
-// --------------------------------------------------
-  
-// Promise chaining 
-  
-  // let demo = new Promise((resolve, reject)=>{
-  //   let  pass = true;
-  //   pass ? resolve(1) : reject("Try again");
-  // }).then(
-  //   (result)=>{
-  //     console.log(result);
-  //     return result * 2;
-  //   },
-  //   (error)=>console.log(error)
-  // ).then(
-  //   (result)=>{
-  //     console.log(result);
-  //     return result * 2;
-  //   },
-  //   (error)=>console.log(error)
-  // ).then(
-  //   (result)=>{
-  //     console.log(result);
-  //     return result * 2;
-  //   },
-  //   (error)=>console.log(error)
-  // );
-
-//   Returning promises
-// A handler, used in .then(handler) may create and return a promise.
-
-// In that case further handlers wait until it settles, and then get its result.
-
-// For instance:
-
-// let demo2 = new Promise(
-//   (resolve, reject)=>{
-//     let test = true;
-//     test ? resolve(1) : reject("Try again");
-//   }).then(
-//     (value)=>{
-//       console.log(value);
-//       return new Promise((resolve, reject) => {
-//         setTimeout(()=> resolve(value * 2), 2000)
-//       });
-//     }
-//   ).then(
-//     (value)=>{
-//       console.log(value);
-//       return new Promise(
-//         (resolve, reject)=>{
-//           setTimeout(()=> resolve( value * 2), 3000)
-//         });
-//     }
-//   ).then(
-//     (value)=>{
-//       console.log(value);
-//       return new Promise(
-//         (resolve, reject)=>{
-//           setTimeout(()=> resolve( value * 2), 3000)
-//         });
-//     }
-//   ).then(
-//     (value)=>{
-//       console.log(value)
-//       setTimeout(()=> console.log( value * 2), 3000)
-//     }
-//   )
-
-
-  // Thenables
-  // In JavaScript, a thenable is an object that has a then() function. All promises are thenables, but not all thenables are promises.
-
-// class Thenable {
-//   constructor(_num){
-//     this.num = _num;
-//   }
-//   then(resolve, reject){
-//     // console.log(resolve);
-//     setTimeout(()=> resolve(this.num * 2), 2000);
-//   }
-
-// }
-
-// new Promise(resolve => resolve(1))
-//   .then(result => {
-//     return new Thenable(result);
-//   })
-//   .then(showConsole);
-
-
-//===================
-// let customer = new Promise((resolve, reject)=>{
-//   let customerName = true;
-//   customerName == true ? resolve(1) : reject("not found");
-// }).then(
-//   (result)=>{
-//     console.log(result);
-//     return new Promise((resolve)=>{
-//       setTimeout(()=>resolve(result * 2),2000);
-//     })
-//   },
-//   (error)=>console.log(error)
-// ).then(
-//   (result)=>{
-//     console.log(result);
-//     return new Promise((resolve)=>{
-//       setTimeout(()=>resolve(result * 2),2000);
-//     })
-//   },
-//   (error)=>console.log(error)
-// ).then(
-//   (result)=>{
-//     console.log(result);
-//   },
-//   (error)=>console.log(error)
-// );
-
-// class Thenable{
-//   constructor(_num){
-//     this.num = _num;
-//   }
-//   then(resolve, reject){
-//     setTimeout(()=>resolve(this.num * 2),2000)
-//   }
-// }
-
-// new Promise( resolve => resolve(1) )
-// .then( result =>{
-//   //  console.log(result)
-//     return new Thenable(result)
-//   }).then(
-//     result => console.log(result)
-//   )
-
-
-// class able{
-//   constructor(num){
-//     this.num = num;
-//   }
-//   then(resolve,reject){
-//     resolve(this.num * 2)
-//   }
-// }
-
-// new Promise( resolve => resolve(3))
-// .then( result =>{
-//   return new able(result)
-// }).then(
-//   result=>console.log(result)
-// )
-
-
-// let vibe = (x)=> new Promise(resolve=>{
-//   resolve(x)
-// }).then(
-//   (result)=> new able(result)
-// ).then(
-//   result=>console.log(result)
-// )
-
-// vibe(12);
-// vibe(6);
 
 
 // Async and Await
 
-let showAnsConsole = (x) => console.log(x); 
+// let showAnsConsole = (x) => console.log(x); 
 
 // // async function myJade(){
 // //   return "I am Jade";
@@ -671,29 +211,29 @@ let showAnsConsole = (x) => console.log(x);
 // );
 
 
-let goal = new Promise((resolve,reject)=>{
-  return resolve(1);
-})
+// let goal = new Promise((resolve,reject)=>{
+//   return resolve(1);
+// })
 
-let leo = async () => goal;
+// let leo = async () => goal;
 // async function leo(){
 //   return goal;
 // }
 
- let leoSmart = () => Promise.resolve(goal); 
+//  let leoSmart = () => Promise.resolve(goal); 
 //  function leoSmart(){
 //   return Promise.resolve(goal);
 //  }
 
- console.log(goal === leo());
- console.log(goal === leoSmart());
+//  console.log(goal === leo());
+//  console.log(goal === leoSmart());
 
  
- let f = async () => 1;
+//  let f = async () => 1;
 
- f().then(
-  showAnsConsole
- )
+//  f().then(
+//   showAnsConsole
+//  )
 
 //  class bugfix{
 //   constructor(_name){
@@ -727,7 +267,7 @@ let leo = async () => goal;
 // AWAIT
 // await literally suspends the function execution until the promise settles, and then resumes it with the promise result.
 
-let show = (x)=> console.log(x);
+// let show = (x)=> console.log(x);
 
 // let vibe = async ()=> "I promise to know this";
 // vibe().then(
@@ -739,9 +279,9 @@ let show = (x)=> console.log(x);
 //   result => console.log(result)
 // )
 
-let boostVibe = async () => await Promise.resolve("Yess we Won");
+// let boostVibe = async () => await Promise.resolve("Yes we Won");
 
-boostVibe().then(show);
+// boostVibe().then(show);
 
 // test await in a regular function to see the kind of error it produces
 
@@ -749,12 +289,217 @@ boostVibe().then(show);
 
 // er(); //SyntaxError: await is only valid in async functions and the top level bodies of modules  
 
+//------------------------------------------
+
+// Fetch(): The global fetch() method starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.
+
+// it helps us to send network request and get information from the server.
 
 
-
-// Fetch() : it helps us to send network request and get information from the server.
+// *NOTE* : A fetch() promise only rejects when a network error is encountered
 
 // let request = fetch();
 // the fetch API provides javascript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. 
+
+// fetch(url).then(
+//   // handle response
+// ).catch(
+//   // handle errors
+// )
+
+/* the following are methods that can be used to read r handle the respective data 
+Response properties:
+
+response.status – HTTP code of the response,
+response.ok – true if the status is 200-299.
+response.headers – Map-like object with HTTP headers.
+Methods to get response body:
+
+response.text() – return the response as text,
+response.json() – parse the response as JSON object,
+response.formData() – return the response as FormData object (multipart/form-data encoding, see the next chapter),
+response.blob() – return the response as Blob (binary data with type),
+response.arrayBuffer() – return the response as ArrayBuffer (low-level binary data),
+Fetch options so far:
+
+method – HTTP-method,
+headers – an object with request headers (not any header is allowed),
+body – the data to send (request body) as string, FormData, BufferSource, Blob or UrlSearchParams object.
+
+*/
+
+// let loadData = async () =>{
+//   let url = "/link.json";
+//   let request = await fetch(url);
+//   let data = await request.json();
+//   return data;
+// };
+// loadData().then(response => console.log(response))
+
+//Javascript
+/*
+Create a function that takes two number strings and returns their sum as a string.
+
+Note "none" or " " return "invalid".
+
+Examples:
+add("000","989") = "989"
+add("111","222") = "333"
+add("","1") = "invalid"
+*/
+
+
+
+/*
+
+Simple GET request with the Fetch API
+fetch('{url}')
+    .then(response => console.log(response));
+Simple POST request with the Fetch API
+fetch('{url}', {
+    method: 'post'
+})
+    .then(response => console.log(response));
+GET with an authorization token (Bearer) in the Fetch API
+fetch('{url}', {
+    headers: {
+        'Authorization': 'Basic {token}'
+    }
+})
+    .then(response => console.log(response));
+GET with querystring data in the Fetch API
+fetch('{url}?var1=value1&var2=value2')
+    .then(response => console.log(response));
+GET with CORS in the Fetch API
+fetch('{url}', {
+    mode: 'cors'
+})
+    .then(response => console.log(response));
+POST with authorization token and querystring data in the Fetch API
+fetch('{url}?var1=value1&var2=value2', {
+    method: 'post',
+    headers: {
+        'Authorization': 'Bearer {token}'
+    }
+})
+    .then(response => console.log(response));
+POST with form data in the Fetch API
+let formData = new FormData();
+formData.append('field1', 'value1');
+formData.append('field2', 'value2');
+
+fetch('{url}', {
+    method: 'post',
+    body: formData
+})
+    .then(response => console.log(response));
+POST with JSON data in the Fetch API
+fetch('{url}', {
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        'field1': 'value1',
+        'field2': 'value2'
+    })
+})
+    .then(response => console.log(response));
+POST with JSON data and CORS in the Fetch API
+fetch('{url}', {
+    method: 'post',
+    mode: 'cors',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        'field1': 'value1',
+        'field2': 'value2'
+    })
+})
+    .then(response => console.log(response));
+How to process the results of the Fetch API request
+The Fetch API returns a Promise. Thatʼs why Iʼm always using .then() and a callback function for processing the response:
+
+fetch(...).then(response => {
+    // process the response
+}
+But you can also await the result if youʼre in an async function:
+
+async function getData(){
+    let data = await fetch(...);
+    // process the response
+}
+Now letʼs take a look at how we can extract the data from the response:
+
+How to check the status code of the Fetch API response
+When sending POST, PATCH, and PUT requests, we are typically interested in the return status code:
+
+fetch(...)
+    .then(response => {
+        if (response.status == 200){
+            // all OK
+        } else {
+            console.log(response.statusText);
+        }
+    });
+How to get a simple value of the Fetch API response
+Some API endpoints may send back an identifier of a new database record that was created using your data:
+
+var userId;
+
+fetch(...)
+    .then(response => response.text())
+    .then(id => {
+        userId = id;
+        console.log(userId)
+    });
+How to convert JSON data of the Fetch API response
+But in most cases, youʼll receive JSON data in the response body:
+
+var dataObj;
+
+fetch(...)
+    .then(response => response.json())
+    .then(data => {
+        dataObj = data;
+        console.log(dataObj)
+    });
+Keep in mind that you can access the data only after both Promises are resolved. This is sometimes a bit confusing, so I always prefer to use async methods and await the results:
+
+async function getData(){
+    var dataObj;
+
+    const response = await fetch(...);
+    const data = await response.json();
+    dataObj = data;
+    console.log(dataObj);
+
+
+*/
+
+
+// let TestApi = async ()=>{
+//   let url = "promise_load.json";
+//   let request = fetch(url,{
+//       method:"GET",
+//       Headers:{"content-type": "application/json; charset=UTF-8"}
+      
+//   });
+//   if(request.status === 200){
+//       return await request.json();
+//   }throw "Not found dude";
+  
+// };
+
+// TestApi().then(
+//   response=>console.log(response)
+//   ).catch(
+//       error => console.log(error)
+//   );
+
+// ========================================
+
+
 
 
