@@ -519,3 +519,13 @@ The HTML DOM is a standard object model and programming interface for HTML
 
 */ 
 
+// let test2 = /^#/gi;
+let test2 = /[0-9]/gi;
+// let test3 = /[^0-9]/gi;
+// let test3 = /[^0-9]/gi;
+let test3 = /[\b0-9]/gi;
+// console.log(test.search(/e/gi))
+// console.log(test2.test("#eye see# success 0"));
+console.log(test2.test("#eye see# success 2"));
+
+
