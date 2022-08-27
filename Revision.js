@@ -500,6 +500,22 @@ async function getData(){
 
 // ========================================
 
+// HTML Dom (Document Object Model)
 
+/*
 
+What is the DOM?
+
+The DOM is a W3C (World Wide Web Consortium) standard.
+The W3C DOM standard is separated into 3 different parts:
+
+    Core DOM - standard model for all document types
+    XML DOM - standard model for XML documents
+    HTML DOM - standard model for HTML documents
+
+    What is the HTML DOM?
+
+The HTML DOM is a standard object model and programming interface for HTML
+
+*/ 
 
