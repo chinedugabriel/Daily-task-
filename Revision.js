@@ -185,7 +185,7 @@ CallBack+
 Asynchronous+
 Promises+
 Async / Await+
-Fetch
+Fetch+
 
 
 */
@@ -526,6 +526,191 @@ let test2 = /[0-9]/gi;
 let test3 = /[\b0-9]/gi;
 // console.log(test.search(/e/gi))
 // console.log(test2.test("#eye see# success 0"));
-console.log(test2.test("#eye see# success 2"));
+// console.log(test2.test("#eye see# success 2"));
+
+// let word = "sch 4ool3";
+let word = "life is great when you get focused";
+
+// let result = word.search(/o/i);
+// let result = word.replace(/o/gi, "a");
+
+// the below expression finds any of the characters between the brackets
+// let result = word.search(/[@#$%!^&*()_+=><?/['\]'{}]/);
+// let result = word.search(/[0-9]/);
+// let result = word.search(/[a|c]/);
+// let result = word.search(/[h\b]/);
+// console.log(result);
+// console.log(/[0-9]/.test(word));//find any number between 0-9
+// console.log(/[a-z]/.test(word));//find any small letter A-z
+// console.log(/[A-Z]/.test(word));//find any capital letter A-z
+// console.log(/[a|c]/.test(word))//find a or c
+// console.log(/[\d]/.test(word));
+// console.log(/[\s]/.test(word));
+// console.log(/[\bw]/.test(word));
+// console.log(/[h\b]/.test(word));
+
+
+let arr = '["wendy", "chinasa", "emmy", "rose", "ndi"]';
+// let obj = {
+//     name : "charls",
+//     age : 26,
+//     gender : "male"
+// };
+
+// rst = " ";
+// for (let e in obj){
+//     // for (f in e.value ){
+//     //     rst += f;
+//     // }
+//     rst += e + " ";
+// }
+// console.log(rst);
+
+// let arrRst = '';
+
+// for (let b of arr){
+//     arrRst += b + " ";
+// }
+// console.log(arrRst);
+let fam = {
+    name : "jeo",
+    age : 23,
+    gender : "Female"
+}
+
+// let familyObj = Object.assign({}, obj, fam, {name : "chinew"});
+// familyObj. name = "Chuka's";
+
+// console.log(familyObj.name);
+// console.log(familyObj);
+// console.log(obj.name);
+
+// let myFam = fam;
+// myFam.name = "Braen";
+// console.log(myFam.name);
+// console.log(fam.name);
+
+// Destructuring
+/*
+The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+ES6 has added a shorthand syntax for destructuring an array.
+*/
+
+let num = ['1','2','3','4'];
+// let [four,two,three,one] = num;
+// console.log(one);
+// console.log(two);
+
+// one = '1'
+// two = '2'
+// three = '3'
+// let ace = ()=>[1,21,3];
+// let [one, ,three] = ace();
+// console.log(one);
+// console.log(three);
+
+// let a, b, c = 4, d = 8;
+// [a,b = 6] = [2];
+// [c, d] = [d, c];
+// console.log(c);
+// console.log(d);
+
+let obj = {
+    // name : "charls",
+    age : 26,
+    gender : "male"
+}
+// let {name: ray, age: as, gender:None} = obj;
+let {name = "tunji", age , gender = "female"} = obj;
+
+// console.log(name);
+// console.log(age);
+// console.log(gender);
+// let a,b;
+// ({a,b} = {a:'Hello', b:'Jack'});
+// console.log(a + b);
+
+// function containsAll(arr){
+//     for(let k = 1; k < arguments.length; k++){
+//         console.log("nu");
+//         let num = arguments[k];
+//         if(arr.indexOf(num) === -1){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// let x = [2,4,6,7];
+// console.log(containsAll(x, 2, 4, 7));
+// console.log(containsAll(x, 6, 4, 9));
+
+// function containsAll(arr, ...nums){
+//     for ( let num of nums ){
+//         if(arr.indexOf(num) === -1){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// let x = [2, 4, 6, 7];
+// console.log(containsAll(x, 2, 4, 7));
+// console.log(containsAll(x, 6, 4, 9));
+
+let arr1 = [2,3,4,5];
+let arr2 = [3,5,6,7];
+let bothArr = [...arr1, ...arr2];
+// console.log(bothArr)
+let result = 0;
+// for (let i of arr1){
+//     result += i
+// }
+// console.log(result)
+
+// function myFunction(w,x,y,z) {
+//     console.log(w+x+y+z);
+// }
+// let args = [1,2,3];
+// myFunction.apply(null, args.concat(4));
+// myFunction(...args, 4);
+
+// let agg = ["one", "two", "five"];
+
+// agg.splice(2,0, "Three");
+
+// console.log(agg);
+
+// class Gender{
+//     constructor(_name, _age, _sex){
+//         this.name = _name;
+//         this.age = _age;
+//         this.sex = _sex;
+//     }
+//  details(){
+//     return `Hi i am ${this.name} and i am ${age} today`
+//     }
+// }
+// let boy = new Gender("kunle", 24, "male");
+// console.log(boy.details())
+
+// function main() {
+//     var exam1 = parseInt(readLine(), 10);
+//     var exam2 = parseInt(readLine(), 10);
+//     var exam3 = parseInt(readLine(), 10);
+    
+//     console.log(Exams.average(exam1,exam2,exam3));
+    
+// }
+// class Exams{
+//     //your code goes here
+
+//     static average(exam1,exam2,exam3){
+//        let  result = (exam1 + exam2 + exam3)/ arguments.length 
+//        return Math.round(exam1,exam2,exam3)
+//     }
+// }
+// main()
+
+// revision
 
 
