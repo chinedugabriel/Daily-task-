@@ -187,8 +187,55 @@ Promises+
 Async / Await+
 Fetch+
 
+>>Projects
+>> portfolio
 
 */
+
+/*
+>>> Node.js
+    Node.js Tutorial
+Node.js HOME
+Node.js Intro
+Node.js Get Started
+Node.js Modules
+Node.js HTTP Module
+Node.js File System
+Node.js URL Module
+Node.js NPM
+Node.js Events
+Node.js Upload Files
+Node.js Email
+
+Node.js MySQL
+MySQL Get Started
+MySQL Create Database
+MySQL Create Table
+MySQL Insert Into
+MySQL Select From
+MySQL Where
+MySQL Order By
+MySQL Delete
+MySQL Drop Table
+MySQL Update
+MySQL Limit
+MySQL Join
+
+Node.js MongoDB
+MongoDB Get Started
+MongoDB Create Database
+MongoDB Create Collection
+MongoDB Insert
+MongoDB Find
+MongoDB Query
+MongoDB Sort
+MongoDB Delete
+MongoDB Drop Collection
+MongoDB Update
+MongoDB Limit
+MongoDB Join
+
+*/ 
 
 
 
@@ -713,4 +760,56 @@ let result = 0;
 
 // revision
 
+
+let mission = {
+    name : "river",
+    get callhim(){
+        console.log(this.name);
+    },
+    set changeName(x){
+        this.name = x;
+        console.log(this.name);
+    }
+}
+let lastBorn = {
+    name : "richy",
+    age : 24
+}
+
+
+// mission.callhim.call(lastBorn);
+// mission.callhim.apply(lastBorn);
+
+// let i;
+// let rxt = [];
+// for(i in lastBorn){
+//     rxt.push(i,lastBorn[i]);
+// }
+
+// console.log(rxt)
+
+// let mixArr = Object.values(lastBorn);
+
+// // console.log(JSON.stringify(lastBorn));
+// mission.changeName = "great";
+// mission.callhim;
+
+// function person(name,lang,age,state){
+//     this.fullName = name,
+//     this.lang = lang,
+//     this.age = age,
+//     this.state = state
+// }
+// class Person{
+// constructor(name,lang,age,state){
+//     this.fullName = name,
+//     this.lang = lang,
+//     this.age = age,
+//     this.state = state
+// }
+
+// }
+// let student1 = new person("angeler", "Kanji", 23, "London");
+
+// write a function that replace b in the following string with t. 'obandbconsulbingldb.com' using regular expression
 
