@@ -195,11 +195,11 @@ Fetch+
 /*
 >>> Node.js
     Node.js Tutorial
-Node.js HOME
-Node.js Intro
-Node.js Get Started
-Node.js Modules
-Node.js HTTP Module
+Node.js HOME+
+Node.js Intro+
+Node.js Get Started+
+Node.js Modules+
+Node.js HTTP Module+
 Node.js File System
 Node.js URL Module
 Node.js NPM
@@ -811,5 +811,4 @@ let lastBorn = {
 // }
 // let student1 = new person("angeler", "Kanji", 23, "London");
 
-// write a function that replace b in the following string with t. 'obandbconsulbingldb.com' using regular expression
 
